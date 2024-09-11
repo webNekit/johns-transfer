@@ -1,0 +1,137 @@
+.header {
+    --padding-y: 24px;
+    width: 100%;
+    padding-top: var(--padding-y);
+    padding-bottom: var(--padding-y);
+    // .header__container
+
+    &__container {}
+
+    // .header__rowContent
+
+    &__rowContent {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    // .header__col
+
+    &__col {
+        // border: 1px solid red;
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    // .header__col--left
+
+    &__col--left {
+        justify-content: flex-start;
+    }
+
+    // .header__logo
+
+    &__logo {}
+
+    // .header__col--center
+
+    &__col--center {
+        flex: auto;
+    }
+
+    // .header__navigation
+
+    &__navigation {
+    }
+
+    // .header__col--right
+
+    &__col--right {
+        justify-content: flex-end;
+    }
+
+    // .header__actions
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    // .header__actions-item
+
+    &__actions-item {
+        position: relative;
+        display: inline-block;
+    }
+
+    // .header__actions-tool
+
+    &__actions-tool {
+
+    }
+
+    // .header__actions-languageWrapper
+
+    &__actions-languageWrapper {
+        position: absolute; // Абсолютное позиционирование для dropdown
+        left: 50%; // Центрируем dropdown относительно кнопки
+        top: calc(100% - 8px); // Располагаем dropdown под кнопкой с отступом
+        transform: translateX(-50%); // Начальное состояние: скрыто и уменьшено по вертикали
+        transform-origin: top center; // Центрируем масштабирование по верхнему краю
+        background-color: var(--color-background-secondary);
+        padding: 8px 16px;
+        border-radius: 4px;
+        z-index: 90; // Убедитесь, что dropdown поверх других элементов
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Опционально: тень для dropdown
+        opacity: 0; // Начальное состояние: скрыто
+        visibility: hidden; // Начальное состояние: невидимо
+        transition: opacity 0.3s ease, top 0.3s ease, visibility 0.3s ease; // Переходы для opacity, transform и visibility
+    }
+
+    &__actions-languageWrapper.show {
+        top: 100%;
+        opacity: 1; // Показать dropdown
+        visibility: visible; // Сделать видимым
+    }
+
+    // .header__actions-languageItem
+
+    &__actions-languageItem {
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+
+    // .header__actions-languageButton
+
+    &__actions-languageButton {
+        transition: color .2s;
+        font-size: 17px;
+        &:hover {
+            color: var(--color-text-secondary);
+        }
+    }
+}
+.button-call {
+}
+.button {
+}
+.button--outline {
+}
+.button-language {
+    --size: 46px;
+    min-width: var(--size);
+    height: var(--size);
+    border: 2px solid var(--color-border-secondary);
+    border-radius: 50%;
+    color: var(--color-text-secondary);
+    transition: background .2s, color .2s, border-color .2s;
+    &:hover {
+        color: var(--color-background);
+        background-color: var(--color-primary);
+    }
+}

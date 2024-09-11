@@ -1,0 +1,17 @@
+.button {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 16px;
+    &--outline {
+        border: 2px solid var(--color-border-secondary);
+        color: var(--color-text-secondary);
+        border-radius: 25px;
+        transition: background .2s, color .2s, border-color .2s;
+        &:hover {
+            border: 2px solid var(--color-primary);
+            background-color: var(--color-primary);
+            color: var(--color-background);
+        }
+    }
+}

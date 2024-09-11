@@ -1,0 +1,45 @@
+.navigation {
+    width: 100%;
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    // .navigation__menu-item
+
+    &__menu-item {
+        display: flex;
+    }
+
+    // .navigation__menu-link
+
+    &__menu-link {
+        position: relative;
+        padding: 2px 2px 6px 0;
+        font-size: 17px;
+        color: var(--color-text-secondary);
+        transition: color .2s;
+        @include small-tablet {
+            font-size: 14px;
+        }
+        &:hover {
+            color: #ffffffa0;
+            &::before {
+                width: 90%;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            border-radius: 2px;
+            background-color: var(--color-text-secondary);
+            transition: width .4s;
+        }
+    }
+}
