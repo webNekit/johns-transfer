@@ -1,0 +1,106 @@
+.advantages {
+    width: 100%;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    background-color: var(--color-background-secondary);
+    &__container {}
+
+    // .advantages__rowContent
+
+    &__rowContent {
+        width: 100%;
+        & > div {
+            &:not(:last-child) {
+                margin-bottom: 52px;
+            }
+        }
+    }
+
+    // .advantages__rowHead
+
+    &__rowHead {
+        @include rowHead;
+    }
+
+    // .advantages__rowHead-title
+
+    &__rowHead-title {
+        text-align: center;
+    }
+
+    // .advantages__rowHead-description
+
+    &__rowHead-description {
+        text-align: center;
+    }
+
+    // .advantages__rowBody
+
+    &__rowBody {
+        width: 100%;
+    }
+
+    // .advantages__list
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 24px;
+        @include small-tablet {
+            grid-template-columns: repeat(2,1fr);
+        }
+        @include mobile {
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+
+    // .advantages__list-item
+
+    &__list-item {
+        width: 100%;
+        height: 100%;
+    }
+
+    // .advantages__list-card
+
+    &__list-card {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    // .advantages__list-cardIcon
+
+    &__list-cardIcon {
+        --size: 56px;
+        width: var(--size);
+        height: var(--size);
+        background-color: var(--color-text-secondary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+        color: var(--color-background);
+    }
+
+    // .advantages__list-cardName
+
+    &__list-cardName {
+        text-align: center;
+        font-size: 22px;
+        color: var(--color-text-secondary);
+    }
+
+    // .advantages__list-cardText
+
+    &__list-cardText {
+        text-align: center;
+        font-weight: 400;
+    }
+}
