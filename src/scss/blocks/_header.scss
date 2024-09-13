@@ -3,6 +3,9 @@
     width: 100%;
     padding-top: var(--padding-y);
     padding-bottom: var(--padding-y);
+    @include small-tablet {
+        position: relative;
+    }
     // .header__container
 
     &__container {}
@@ -39,6 +42,9 @@
 
     &__col--center {
         flex: auto;
+        @include small-tablet {
+            flex: none;
+        }
     }
 
     // .header__navigation
@@ -50,6 +56,7 @@
 
     &__col--right {
         justify-content: flex-end;
+        
     }
 
     // .header__actions
@@ -106,6 +113,7 @@
         }
     }
 
+
     // .header__actions-languageButton
 
     &__actions-languageButton {
@@ -115,12 +123,31 @@
             color: var(--color-text-secondary);
         }
     }
+
 }
+
 .button-call {
+    @include mobile {
+        font-size: 14px;
+    }
 }
-.button {
-}
-.button--outline {
+
+.menu-btn {
+    display: none;
+    --size: 46px;
+    min-width: var(--size);
+    height: var(--size);
+    border: 2px solid var(--color-border-secondary);
+    border-radius: 50%;
+    color: var(--color-text-secondary);
+    transition: background .2s, color .2s, border-color .2s;
+    &:hover {
+        color: var(--color-background);
+        background-color: var(--color-primary);
+    }
+    @include small-tablet {
+        display: block;
+    }
 }
 .button-language {
     --size: 46px;

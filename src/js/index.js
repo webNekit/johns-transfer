@@ -6,3 +6,6 @@ orderTabs();
 
 import customSelect from "./modules/customSelect";
 customSelect();
+
+import mobileMenu from "./modules/mobileMenu";
+mobileMenu();
