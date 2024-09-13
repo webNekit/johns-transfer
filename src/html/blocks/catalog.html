@@ -1,215 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John&#8217;s vip transfer</title>
-    <meta name="description" content="Краткое описание страницы, которое будет отображаться в результатах поиска." />
-    <meta name="keywords" content="ключевое слово 1, ключевое слово 2, ключевое слово 3" />
-    <meta name="author" content="Ваше имя или название компании" />
-    <meta http-equiv="cache-control" content="max-age=1800" />
-    <meta name="theme-color" content="#317EFB" />
-    <meta property="og:title" content="Заголовок страницы" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://example.com/page.html" />
-    <meta property="og:image" content="https://example.com/image.jpg" />
-    <meta property="og:description" content="Описание страницы, которое будет отображаться в социальных сетях." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Заголовок страницы" />
-    <meta name="twitter:description" content="Описание страницы" />
-    <meta name="twitter:image" content="https://example.com/image.jpg" />
-    <meta name="language" content="ru" />
-    <meta name="robots" content="index, nofollow" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
-</head>
-
-<body class="website" id="website">
-    <header class="website__header header" id="header">
-    <div class="container header__container">
-        <div class="header__rowContent">
-            <div class="header__col header__col--left">
-                <div class="header__logo logo">
-                    <a href="" class="logo__link">
-                        <img src="" alt="Логотип сайта John's vip transfer" class="logo__brand">
-                    </a>
-                </div>
-            </div>
-            <div class="header__col header__col--center">
-                <nav class="header__navigation navigation">
-                    <menu class="navigation__menu">
-                        <li class="navigation__menu-item"><a href="#!" class="navigation__menu-link">Парк машин</a></li>
-                        <li class="navigation__menu-item"><a href="#!" class="navigation__menu-link">Услуги</a></li>
-                        <li class="navigation__menu-item"><a href="#!" class="navigation__menu-link">О&#160;нас</a></li>
-                        <li class="navigation__menu-item"><a href="#!" class="navigation__menu-link">Статьи</a></li>
-                        <li class="navigation__menu-item"><a href="#!" class="navigation__menu-link">Сотрудничество</a></li>
-                        <li class="navigation__menu-item"><a href="#!" class="navigation__menu-link">Вопрос-Ответ</a></li>
-                        <li class="navigation__menu-item"><a href="#!" class="navigation__menu-link">Контакты</a></li>
-                    </menu>
-                </nav>
-            </div>
-            <div class="header__col header__col--right">
-                <ul class="header__actions">
-                    <li class="header__actions-item">
-                        <button class="header__actions-tool button-call button button--outline" id="buttonCallModal">
-                            Заказать звонок
-                        </button>
-                    </li>
-                    <li class="header__actions-item">
-                        <button class="header__actions-tool button-language" id="buttonLanguage">RU</button>
-                        <ul class="header__actions-languageWrapper" id="languageDropdown">
-                            <li class="header__actions-languageItem">
-                                <button class="header__actions-languageButton">RU</button>
-                            </li>
-                            <li class="header__actions-languageItem">
-                                <button class="header__actions-languageButton">EN</button>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-</header>
-    <div class="website__layout">
-        <main class="website__main main" id="main">
-            <div class="main__wrapper">
-                <section class="main__wrapperSection hero" id="hero">
-    <div class="container hero__container">
-        <div class="hero__contentWrapper">
-            <div class="hero__rowHead">
-                <h1 class="hero__superTitle">Бронирование автомобилей бизнес-класса в&#160;казахстане</h1>
-            </div>
-            <div class="hero__rowBody">
-                <div class="hero__banner">
-                    <img loading="lazy" src="./img/hero-img-2.png" alt="" class="hero__bannerImg">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-                <section class="main__wrapperSection order" id="order">
-    <div class="container order__container">
-        <div class="order__wrapper tab-container">
-            <!-- <div class="order__tab">
-                <ul class="order__tab-controls">
-                    <li class="order__tab-item">
-                        <button data-tab-control="tab1" class="order__tab-target">Заказать трансфер</button>
-                    </li>
-                    <li class="order__tab-item">
-                        <button data-tab-control="tab2" class="order__tab-target">Аренда авто с водителем</button>
-                    </li>
-                </ul>
-            </div> -->
-            <div class="order__form">
-                <div data-tab-target="tab1" class="order__tab-path">
-                    <form class="order__formWrapper">
-                        <div class="order__form-group">
-                            <div class="order__form-item">
-                                <label for="from-input" class="order__form-label">Откуда</label>
-                                <input type="text" class="order__form-input" id="from-input" placeholder="Город, улица, дом" required>
-                            </div>
-                            <div class="order__form-item">
-                                <label for="to-input" class="order__form-label">Куда</label>
-                                <input type="text" class="order__form-input" id="to-input" placeholder="Город, улица, дом" required>
-                            </div>
-                            <div class="order__form-item">
-                                <label for="date-input" class="order__form-label">Дата</label>
-                                <input type="date" class="order__form-input" id="date-input" required>
-                            </div>
-                            <div class="order__form-item">
-                                <label for="time-input" class="order__form-label">Время</label>
-                                <input type="time" class="order__form-input" id="time-input" placeholder="Город, улица, дом" required>
-                            </div>
-                            <div class="order__form-item">
-                                <button class="order__form-button button button--primary">Забронировать</button>
-                            </div>
-                        </div>
-                        <div class="order__form-group">
-                            <div class="order__form-item">
-                                <label for="class-auto-input1" class="order__form-label">Класс авто</label>
-                                <input type="text" class="order__form-input custom-select" id="class-auto-input1" placeholder="Бизнес" required>
-                                <ul class="order__form-list">
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Стандарт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="order__form-item">
-                                <label for="class-auto-input2" class="order__form-label">Предпочитаемая марка авто</label>
-                                <input type="text" class="order__form-input custom-select" id="class-auto-input2" placeholder="Audi" required>
-                                <ul class="order__form-list">
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Стандарт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-                <section class="main__wrapperSection catalog" id="catalog">
+<section class="main__wrapperSection catalog" id="catalog">
     <div class="container catalog__container">
         <div class="catalog__rowContent">
             <div class="catalog__rowHead">
                 <h2 class="catalog__rowHead-title headSection-title">Популярные автомобили для аренды</h2>
-                <p class="catalog__rowHead-description headSection-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eaque aut ratione, repellat nesciunt omnis dolores dolor veritatis at&#160;quas, nisi sunt beatae perferendis. Architecto asperiores repudiandae accusamus adipisci modi aspernatur delectus esse, distinctio accusantium sapiente magni expedita sunt nulla?</p>
+                <p class="catalog__rowHead-description headSection-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, eaque aut ratione, repellat nesciunt omnis dolores dolor veritatis at quas, nisi sunt beatae perferendis. Architecto asperiores repudiandae accusamus adipisci modi aspernatur delectus esse, distinctio accusantium sapiente magni expedita sunt nulla?</p>
             </div>
             <div class="catalog__rowBody">
                 <ul class="catalog__list">
@@ -249,7 +43,7 @@
                                 <div class="catalog__card-price">
                                     <div class="catalog__card-priceText">Цена</div>
                                     <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
+                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от 1300 тг </span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +88,7 @@
                                 <div class="catalog__card-price">
                                     <div class="catalog__card-priceText">Цена</div>
                                     <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
+                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от 1300 тг </span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
                                     </div>
                                 </div>
                             </div>
@@ -339,7 +133,7 @@
                                 <div class="catalog__card-price">
                                     <div class="catalog__card-priceText">Цена</div>
                                     <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
+                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от 1300 тг </span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
                                     </div>
                                 </div>
                             </div>
@@ -384,7 +178,7 @@
                                 <div class="catalog__card-price">
                                     <div class="catalog__card-priceText">Цена</div>
                                     <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
+                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от 1300 тг </span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
                                     </div>
                                 </div>
                             </div>
@@ -429,7 +223,7 @@
                                 <div class="catalog__card-price">
                                     <div class="catalog__card-priceText">Цена</div>
                                     <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
+                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от 1300 тг </span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
                                     </div>
                                 </div>
                             </div>
@@ -474,7 +268,7 @@
                                 <div class="catalog__card-price">
                                     <div class="catalog__card-priceText">Цена</div>
                                     <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
+                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от 1300 тг </span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
                                     </div>
                                 </div>
                             </div>
@@ -519,7 +313,7 @@
                                 <div class="catalog__card-price">
                                     <div class="catalog__card-priceText">Цена</div>
                                     <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
+                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от 1300 тг </span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
                                     </div>
                                 </div>
                             </div>
@@ -564,7 +358,7 @@
                                 <div class="catalog__card-price">
                                     <div class="catalog__card-priceText">Цена</div>
                                     <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
+                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от 1300 тг </span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
                                     </div>
                                 </div>
                             </div>
@@ -581,63 +375,3 @@
         </div>
     </div>
 </section>
-                <section class="main__wrapperSection process-works" id="process-works">
-    <div class="container process-works__container">
-        <div class="process-works__rowContent">
-            <div class="process-works__rowHead">
-                <h2 class="process-works__rowHead-title headSection-title">Как это работает?</h2>
-                <p class="process-works__rowHead-description headSection-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci culpa blanditiis magnam fugiat, quasi at&#160;ex&#160;labore, dolorum fugit officia alias accusantium unde aut nulla!</p>
-            </div>
-            <div class="process-works__rowBody">
-                <div class="process-works__col process-works__col--left">
-                    <ul class="process-works__stages">
-                        <li class="process-works__stages-item">
-                            <div class="process-works__stages-card">
-                                <div class="process-works__stages-icon">
-                                    <i class="ri-search-line"></i>
-                                </div>
-                                <div class="process-works__stages-detail">
-                                    <h3 class="process-works__stages-detailTitle">Lorem ipsum dolor sit amet consectetur.</h3>
-                                    <p class="process-works__stages-detailText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, amet delectus. Delectus!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="process-works__stages-item">
-                            <div class="process-works__stages-card">
-                                <div class="process-works__stages-icon">
-                                    <i class="ri-search-line"></i>
-                                </div>
-                                <div class="process-works__stages-detail">
-                                    <h3 class="process-works__stages-detailTitle">Lorem ipsum dolor sit amet consectetur.</h3>
-                                    <p class="process-works__stages-detailText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, amet delectus. Delectus!</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="process-works__stages-item">
-                            <div class="process-works__stages-card">
-                                <div class="process-works__stages-icon">
-                                    <i class="ri-search-line"></i>
-                                </div>
-                                <div class="process-works__stages-detail">
-                                    <h3 class="process-works__stages-detailTitle">Lorem ipsum dolor sit amet consectetur.</h3>
-                                    <p class="process-works__stages-detailText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, amet delectus. Delectus!</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="process-works__col process-works__col--right">
-                    <img loading="lazy" src="./img/works-img-1.png" alt="" class="process-works__image">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-            </div>
-        </main>
-    </div>
-
-    <script src="./js/index.bundle.js"></script>
-</body>
-
-</html>

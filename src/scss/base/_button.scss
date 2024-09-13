@@ -1,17 +1,30 @@
 .button {
     cursor: pointer;
     display: inline-block;
+    font-weight: 500;
     padding: 10px 16px;
-    font-size: 16px;
+    border-radius: 25px;
+    @include mobile {
+        padding: 14px 16px;
+    }
     &--outline {
         border: 2px solid var(--color-border-secondary);
         color: var(--color-text-secondary);
-        border-radius: 25px;
         transition: background .2s, color .2s, border-color .2s;
         &:hover {
             border: 2px solid var(--color-primary);
             background-color: var(--color-primary);
             color: var(--color-background);
+        }
+    }
+    &--primary {
+        border: 2px solid var(--color-primary);
+        background-color: var(--color-primary);
+        color: var(--color-background);
+        transition: background .2s, color .2s, border-color .2s;
+        &:hover {
+            border: 2px solid var(--color-primary-secondary);
+            background-color: var(--color-primary-secondary);
         }
     }
 }

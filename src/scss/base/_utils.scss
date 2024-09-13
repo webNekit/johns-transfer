@@ -38,3 +38,21 @@
 .flex-center {
 	justify-content: center;
 }
+
+.headSection-title {
+	font-size: 54px;
+	font-weight: 600;
+	color: var(--color-text-secondary);
+	@include small-tablet {
+		font-size: 42px;
+	}
+	@include mobile { 
+		font-size: 32px;
+		font-weight: 500;
+	}
+}
+
+.headSection-description {
+	font-size: 18px;
+	color: var(--color-text-secondary);
+}
