@@ -1,0 +1,136 @@
+.articles {
+    width: 100%;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    &__container {}
+
+    // .articles__rowContent
+
+    &__rowContent {
+        & > div:not(:last-child) {
+            margin-bottom: 52px;
+        }
+    }
+
+    // .articles__rowHead
+
+    &__rowHead {
+        @include rowHead;
+    }
+
+    // .articles__rowHead-title
+
+    &__rowHead-title {
+        text-align: center;
+    }
+
+    // .articles__rowHead-description
+
+    &__rowHead-description {
+        text-align: center;
+    }
+
+    // .articles__rowBody
+
+    &__rowBody {
+        width: 100%;
+    }
+
+    // .articles__list
+
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 16px;
+        @include tablet {
+            grid-template-columns: repeat(3,1fr);
+        }
+        @include small-tablet {
+            grid-template-columns: repeat(2,1fr);
+        }
+        @include mobile {
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+
+    // .articles__item
+
+    &__item {
+        width: 100%;
+        height: 100%;
+    }
+
+    // .articles__card
+
+    &__card {
+        width: 100%;
+        height: 100%;
+        padding: 12px 12px;
+        border-radius: 18px;
+        border: 1px solid var(--color-separator);
+    }
+
+    // .articles__card-preview
+
+    &__card-preview {
+        width: 100%;
+        height: 280px;
+    }
+
+    // .articles__card-previewImg
+
+    &__card-previewImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 18px;
+    }
+
+    // .articles__card-detail
+
+    &__card-detail {
+        padding-top: 18px;
+        width: 100%;
+    }
+
+    // .articles__card-more
+
+    &__card-more {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        &:hover {
+            .articles__card-name {
+                color: var(--color-primary);
+            }
+        }
+
+    }
+
+    // .articles__card-name
+
+    &__card-name {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--color-text-secondary);
+        transition: color .3s;
+        i {
+            font-size: 24px;
+        }
+    }
+
+    // .articles__card-text
+
+    &__card-text {
+        margin-top: 14px;
+        margin-bottom: 24px;
+    }
+
+    // .articles__card-date
+
+    &__card-date {
+        display: block;
+    }
+}
