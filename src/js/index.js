@@ -12,3 +12,6 @@ mobileMenu();
 
 import phoneFormat from "./modules/phoneFormatter";
 phoneFormat();
+
+import modalFunctionality from "./modules/contactsModal";
+modalFunctionality();

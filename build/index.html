@@ -150,106 +150,24 @@
                 <section class="main__wrapperSection order" id="order">
     <div class="container order__container">
         <div class="order__wrapper tab-container">
-            <!-- <div class="order__tab">
-                <ul class="order__tab-controls">
-                    <li class="order__tab-item">
-                        <button data-tab-control="tab1" class="order__tab-target">Заказать трансфер</button>
-                    </li>
-                    <li class="order__tab-item">
-                        <button data-tab-control="tab2" class="order__tab-target">Аренда авто с водителем</button>
-                    </li>
-                </ul>
-            </div> -->
             <div class="order__form">
                 <div data-tab-target="tab1" class="order__tab-path">
                     <form class="order__formWrapper">
                         <div class="order__form-group">
                             <div class="order__form-item">
-                                <label for="from-input" class="order__form-label">Откуда</label>
+                                <label for="from-input" class="order__form-label">Местоположение</label>
                                 <input type="text" class="order__form-input" id="from-input" placeholder="Город, улица, дом" required>
                             </div>
                             <div class="order__form-item">
-                                <label for="to-input" class="order__form-label">Куда</label>
-                                <input type="text" class="order__form-input" id="to-input" placeholder="Город, улица, дом" required>
+                                <label for="name-input" class="order__form-label">Имя</label>
+                                <input type="text" class="order__form-input" id="name-input" placeholder="Укажите Ваше имя" required>
                             </div>
                             <div class="order__form-item">
-                                <label for="date-input" class="order__form-label">Дата</label>
-                                <input type="date" class="order__form-input" id="date-input" required>
-                            </div>
-                            <div class="order__form-item">
-                                <label for="time-input" class="order__form-label">Время</label>
-                                <input type="time" class="order__form-input" id="time-input" placeholder="Город, улица, дом" required>
+                                <label for="phone-input" class="order__form-label">Номер телефона</label>
+                                <input type="tel" class="order__form-input" id="phone-input" placeholder="Укажите номер телефона" required>
                             </div>
                             <div class="order__form-item">
                                 <button class="order__form-button button button--primary">Забронировать</button>
-                            </div>
-                        </div>
-                        <div class="order__form-group">
-                            <div class="order__form-item">
-                                <label for="class-auto-input1" class="order__form-label">Класс авто</label>
-                                <input type="text" class="order__form-input custom-select" id="class-auto-input1" placeholder="Бизнес" required>
-                                <ul class="order__form-list">
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Стандарт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="order__form-item">
-                                <label for="class-auto-input2" class="order__form-label">Предпочитаемая марка авто</label>
-                                <input type="text" class="order__form-input custom-select" id="class-auto-input2" placeholder="Audi" required>
-                                <ul class="order__form-list">
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Стандарт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                    <li class="order__form-listItem">
-                                        <button class="order__form-listTarget">Комфорт</button>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </form>
@@ -273,348 +191,7 @@
                                 <img loading="lazy" src="./img/catalog-img-1.png" alt="BMW M5 Coupe" class="catalog__card-previewImg">
                             </div>
                             <div class="catalog__card-detail">
-                                <h3 class="catalog__card-name">BMW m8 coupe 2022</h3>
-                                <ul class="catalog__card-specifics">
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#users"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 места</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#transmission"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">АКПП</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#door"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 двери</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#engine"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">340 л/с</span>
-                                    </li>
-                                </ul>
-                                <div class="catalog__card-price">
-                                    <div class="catalog__card-priceText">Цена</div>
-                                    <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__card-bottom">
-                                <a href="#!" class="catalog__card-bottomLink button button--primary">Подробнее <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__card">
-                            <div class="catalog__card-preview">
-                                <img loading="lazy" src="./img/catalog-img-1.png" alt="BMW M5 Coupe" class="catalog__card-previewImg">
-                            </div>
-                            <div class="catalog__card-detail">
-                                <h3 class="catalog__card-name">BMW m8 coupe 2022</h3>
-                                <ul class="catalog__card-specifics">
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#users"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 места</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#transmission"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">АКПП</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#door"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 двери</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#engine"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">340 л/с</span>
-                                    </li>
-                                </ul>
-                                <div class="catalog__card-price">
-                                    <div class="catalog__card-priceText">Цена</div>
-                                    <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__card-bottom">
-                                <a href="#!" class="catalog__card-bottomLink button button--primary">Подробнее <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__card">
-                            <div class="catalog__card-preview">
-                                <img loading="lazy" src="./img/catalog-img-1.png" alt="BMW M5 Coupe" class="catalog__card-previewImg">
-                            </div>
-                            <div class="catalog__card-detail">
-                                <h3 class="catalog__card-name">BMW m8 coupe 2022</h3>
-                                <ul class="catalog__card-specifics">
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#users"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 места</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#transmission"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">АКПП</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#door"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 двери</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#engine"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">340 л/с</span>
-                                    </li>
-                                </ul>
-                                <div class="catalog__card-price">
-                                    <div class="catalog__card-priceText">Цена</div>
-                                    <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__card-bottom">
-                                <a href="#!" class="catalog__card-bottomLink button button--primary">Подробнее <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__card">
-                            <div class="catalog__card-preview">
-                                <img loading="lazy" src="./img/catalog-img-1.png" alt="BMW M5 Coupe" class="catalog__card-previewImg">
-                            </div>
-                            <div class="catalog__card-detail">
-                                <h3 class="catalog__card-name">BMW m8 coupe 2022</h3>
-                                <ul class="catalog__card-specifics">
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#users"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 места</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#transmission"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">АКПП</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#door"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 двери</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#engine"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">340 л/с</span>
-                                    </li>
-                                </ul>
-                                <div class="catalog__card-price">
-                                    <div class="catalog__card-priceText">Цена</div>
-                                    <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__card-bottom">
-                                <a href="#!" class="catalog__card-bottomLink button button--primary">Подробнее <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__card">
-                            <div class="catalog__card-preview">
-                                <img loading="lazy" src="./img/catalog-img-1.png" alt="BMW M5 Coupe" class="catalog__card-previewImg">
-                            </div>
-                            <div class="catalog__card-detail">
-                                <h3 class="catalog__card-name">BMW m8 coupe 2022</h3>
-                                <ul class="catalog__card-specifics">
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#users"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 места</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#transmission"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">АКПП</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#door"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 двери</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#engine"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">340 л/с</span>
-                                    </li>
-                                </ul>
-                                <div class="catalog__card-price">
-                                    <div class="catalog__card-priceText">Цена</div>
-                                    <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__card-bottom">
-                                <a href="#!" class="catalog__card-bottomLink button button--primary">Подробнее <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__card">
-                            <div class="catalog__card-preview">
-                                <img loading="lazy" src="./img/catalog-img-1.png" alt="BMW M5 Coupe" class="catalog__card-previewImg">
-                            </div>
-                            <div class="catalog__card-detail">
-                                <h3 class="catalog__card-name">BMW m8 coupe 2022</h3>
-                                <ul class="catalog__card-specifics">
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#users"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 места</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#transmission"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">АКПП</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#door"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 двери</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#engine"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">340 л/с</span>
-                                    </li>
-                                </ul>
-                                <div class="catalog__card-price">
-                                    <div class="catalog__card-priceText">Цена</div>
-                                    <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__card-bottom">
-                                <a href="#!" class="catalog__card-bottomLink button button--primary">Подробнее <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__card">
-                            <div class="catalog__card-preview">
-                                <img loading="lazy" src="./img/catalog-img-1.png" alt="BMW M5 Coupe" class="catalog__card-previewImg">
-                            </div>
-                            <div class="catalog__card-detail">
-                                <h3 class="catalog__card-name">BMW m8 coupe 2022</h3>
-                                <ul class="catalog__card-specifics">
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#users"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 места</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#transmission"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">АКПП</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#door"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 двери</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#engine"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">340 л/с</span>
-                                    </li>
-                                </ul>
-                                <div class="catalog__card-price">
-                                    <div class="catalog__card-priceText">Цена</div>
-                                    <div class="catalog__card-priceValue">
-                                        <span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--first">от&#160;1300 тг&#160;</span><span class="catalog__card-priceVelueInner catalog__card-priceVelueInner--secondary">/ ч</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="catalog__card-bottom">
-                                <a href="#!" class="catalog__card-bottomLink button button--primary">Подробнее <i class="ri-arrow-right-line"></i></a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="catalog__item">
-                        <div class="catalog__card">
-                            <div class="catalog__card-preview">
-                                <img loading="lazy" src="./img/catalog-img-1.png" alt="BMW M5 Coupe" class="catalog__card-previewImg">
-                            </div>
-                            <div class="catalog__card-detail">
-                                <h3 class="catalog__card-name">BMW m8 coupe 2022</h3>
-                                <ul class="catalog__card-specifics">
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#users"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 места</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#transmission"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">АКПП</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#door"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">4 двери</span>
-                                    </li>
-                                    <li class="catalog__card-specificsItem">
-                                        <svg class="icon catalog__card-specificsIcon">
-                                            <use href="./img/svgsprite/sprite.symbol.svg#engine"></use>
-                                        </svg>
-                                        <span class="catalog__card-specificsText">340 л/с</span>
-                                    </li>
-                                </ul>
+                                <h3 class="catalog__card-name">Стандарт</h3>
                                 <div class="catalog__card-price">
                                     <div class="catalog__card-priceText">Цена</div>
                                     <div class="catalog__card-priceValue">
@@ -728,9 +305,63 @@
         </div>
     </div>
 </section>
+                <section class="main__wrapperSection about" id="about">
+    <div class="container about__container">
+        <div class="about__rowContent">
+            <div class="about__rowHead">
+                <h2 class="about__title headSection-title">О&#160;компании</h2>
+                <p class="about__subtext headSection-description">Мы&#160;организовываем трансферы в&#160;120 странах мира&#160;&#8212; из&#160;аэропорта, с&#160;вокзала, для перемещения по&#160;городу или между городами.</p>
+                <div class="about__text">
+                    <p>Работаем так, чтобы ваш путь был комфортным и&#160;безопасным, а&#160;заказ на&#160;сайте&#160;&#8212; понятным и&#160;быстрым.</p>
+                    <p>В&#160;отличие от&#160;такси, стоимость трансфера фиксирована&#160;&#8212; любой адрес в&#160;городе по&#160;одной цене. Вы&#160;не&#160;платите за&#160;встречу с&#160;табличкой и&#160;провоз багажа. Даже если рейс задержали, мы&#160;дождёмся вас бесплатно.</p>
+                    <p>Заказать поездку можно на&#160;этом сайте и&#160;автомобиль прибудет к&#160;запланированной минуте.</p>
+                    <p>Заказать поездку можно на&#160;этом сайте и&#160;автомобиль прибудет к&#160;запланированной минуте.</p>
+                </div>
+            </div>
+            <div class="about__rowBody">
+                <img loading="lazy" src="./img/about-img-1.jpg" alt="" class="about__rowBody-img">
+            </div>
+        </div>
+    </div>
+</section>
             </div>
         </main>
     </div>
+    <div class="contacts-modal" id="contacts-modal">
+    <div class="contacts-modal__container">
+        <div class="contacts-modal__left">
+            <img loading="lazy" src="./img/form-img-2.jpg" alt="" class="contacts-modal__left-img">
+        </div>
+        <div class="contacts-modal__right">
+            <button class="contacts-modal__close-btn">
+                <i class="ri-close-line"></i>
+            </button>
+            <div class="contacts-modal__right-wrapper">
+                <div class="contacts-modal__rowHead">
+                    <h2 class="contacts-modal__title">Закажите звонок</h2>
+                    <h3 class="contacts-modal__subtitle">и&#160;мы&#160;ответим в&#160;кратчайшие сроки</h3>
+                </div>
+                <form class="contacts-modal__form">
+                    <div class="contacts-modal__form-item">
+                        <label for="name-input" class="contacts-modal__form-label">Введите ваше имя</label>
+                        <input type="text" class="contacts-modal__form-input" id="name-input" placeholder="Иван Иванович" required>
+                    </div>
+                    <div class="contacts-modal__form-item">
+                        <label for="phone-input" class="contacts-modal__form-label">Введите ваш телефон</label>
+                        <input type="tel" class="contacts-modal__form-input" id="phone-input" placeholder="7900800300" required>
+                    </div>
+                    <div class="contacts-modal__form-item">
+                        <label for="" class="contacts-modal__form-label">Введите вашу почту</label>
+                        <input type="email" class="contacts-modal__form-input" id="name-input" placeholder="user@example.com" required>
+                    </div>
+                    <div class="contacts-modal__form-item">
+                        <button class="contacts-modal__form-button button button--primary">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
     <footer class="website__footer footer" id="footer">
     <div class="container footer__container">
         <div class="footer__rowTop">

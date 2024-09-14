@@ -1,0 +1,156 @@
+.contacts-modal {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-background-secondary);
+    transition: top .3s ease-out;
+    z-index: 100;
+    &--active {
+        top: 0;
+    }
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+
+    // .contacts-modal__left
+
+    &__left {
+        width: 100%;
+        height: 100%;
+        grid-column: 2 span;
+        @include small-tablet {
+            grid-column: 5 span;
+            order: 2;
+        }
+    }
+
+    // .contacts-modal__left-img
+
+    &__left-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    // .contacts-modal__right
+
+    &__right {
+        position: relative;
+        width: 100%;
+        padding: 32px 32px;
+        grid-column: 3 span;
+        @include small-tablet {
+            grid-column: 5 span;
+            order: 1;
+        }
+    }
+
+    // .contacts-modal__close-btn
+
+    &__close-btn {
+        --size: 46px;
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        width: var(--size);
+        height: var(--size);
+        font-size: 24px;
+        color: var(--color-text-secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--color-primary-secondary);
+        border-radius: 50%;
+        transition: background .3s, color .3s, border .3s;
+        &:hover {
+            background-color: var(--color-primary);
+            border-color: var(--color-primary);
+            color: var(--color-background);
+        }
+    }
+
+    // .contacts-modal__right-wrapper
+
+    &__right-wrapper {
+        & > div:not(:last-child) {
+            margin-bottom: 42px;
+        }
+    }
+
+    // .contacts-modal__rowHead
+
+    &__rowHead {
+        width: calc(100% - 32px);
+    }
+
+    // .contacts-modal__title
+
+    &__title {
+        font-size: 42px;
+        color: var(--color-text-secondary);
+        @include mobile {
+            font-size: 32px;
+        }
+    }
+
+    // .contacts-modal__subtitle
+
+    &__subtitle {
+        font-size: 24px;
+    }
+
+    // .contacts-modal__form
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    // .contacts-modal__form-item
+
+    &__form-item {
+        flex: 1;
+    }
+
+    // .contacts-modal__form-label
+
+    &__form-label {
+        display: block;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 8px;
+    }
+
+    // .contacts-modal__form-input
+
+    &__form-input {
+        width: 100%;
+        padding: 14px 14px;
+        border-radius: 25px;
+        font-weight: 500;
+        color: var(--color-text-secondary);
+        border: 1px solid var(--color-separator);
+        outline: none;
+        transition: outline .3s;
+        &:focus {
+            outline: 1px solid var(--color-text-secondary);
+        }
+    }
+
+    // .contacts-modal__form-button
+
+    &__form-button {
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
