@@ -3,6 +3,7 @@
     width: 100%;
     padding-top: var(--padding-y);
     padding-bottom: var(--padding-y);
+    border-bottom: 1px solid var(--color-separator);
     @include small-tablet {
         position: relative;
     }

@@ -87,4 +87,94 @@
             transition: width .4s;
         }
     }
+
+    &__submenu {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 200px;
+        border-radius: 8px;
+        background-color: var(--color-foreground);
+        z-index: 30;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        display: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid var(--color-separator);
+        @include small-tablet {
+            width: 100%;
+        }
+        &-item {
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+            &:hover {
+                ul {
+                    display: block;
+                }
+            }
+            @include small-tablet {
+                position: none;
+            }
+            ul {
+                width: 200px;
+                border: 1px solid var(--color-separator);
+                padding-top: 10px;
+                padding-bottom: 10px;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                background-color: var(--color-foreground);
+                border-radius: 8px;
+                display: none;
+                z-index: 40;
+                @include small-tablet {
+                    width: 100%;
+                    height: auto;
+                    top: calc(100% + 10px);
+                    left: 0;
+                    background-color: var(--color-text-secondary);
+                    
+                }
+                li {
+                    display: inline-block;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                    @include small-tablet {
+                        display: block;
+                    }
+                    a {
+                        display: block;
+                        padding-inline: 8px;
+                        transition: color .3s;
+                        &:hover {
+                            color: var(--color-text-secondary);
+                        }
+                    }
+                }
+            }
+        }
+        &-link {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            padding-inline: 8px;
+            transition: color .3s;
+            &:hover {
+                color: var(--color-text-secondary);
+            }
+        }
+    }
+
+    &__menu-item:hover {
+        & > ul {
+            display: block;
+        }
+    }
 }

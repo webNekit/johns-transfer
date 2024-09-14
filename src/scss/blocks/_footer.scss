@@ -1,0 +1,230 @@
+.footer {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 1px solid var(--color-separator);
+    // .footer__container
+
+    &__container {}
+
+    // .footer__rowTop
+
+    &__rowTop {
+        width: 100%;
+        padding-bottom: 50px;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-gap: 24px;
+        border-bottom: 1px solid var(--color-separator);
+    }
+
+    // .footer__left
+
+    &__left {
+        width: 100%;
+        grid-column: 4 span;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+        @include small-tablet {
+            grid-column: 6 span;
+        }
+        @include mobile {
+            grid-column: 12 span;
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {}
+
+    // .footer__about-company
+
+    &__about-company {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    // .footer__politics-link
+
+    &__politics-link {
+        font-size: 14px;
+    }
+
+    // .footer__socials
+
+    &__socials {
+        display: flex;
+        gap: 6px;
+    }
+
+    // .footer__socials-item
+
+    &__socials-item {
+        display: inline-flex;
+    }
+
+    // .footer__socials-link
+
+    &__socials-link {
+        --size: 42px;
+        width: var(--size);
+        height: var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-text-secondary);
+        border-radius: 50%;
+        border: 1px solid var(--color-separator);
+        background-color: var(--color-background-secondary);
+        transition: background .3s, color .3s;
+        &:hover {
+            color: var(--color-background);
+            background-color: var(--color-primary);
+        }
+    }
+
+    // .footer__right
+
+    &__right {
+        width: 100%;
+        grid-column: 8 span;
+        display: flex;
+        gap: 24px;
+        @include small-tablet {
+            grid-column: 6 span;
+        }
+        @include mobile {
+            grid-column: 12 span;
+            flex-direction: column;
+        }
+    }
+
+    // .footer__nav
+
+    &__nav {
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    // .footer__nav-item
+
+    &__nav-item {
+        flex: 1;
+    }
+
+    // .footer__nav-title
+
+    &__nav-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--color-text-secondary);
+        margin-bottom: 28px;
+    }
+
+    // .footer__nav-menu
+
+    &__nav-menu {
+        width: 100%;
+    }
+
+    // .footer__nav-menuItem
+
+    &__nav-menuItem {
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+
+    // .footer__nav-menuLink
+
+    &__nav-menuLink {
+        width: 100%;
+        transition: color .2s;
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+
+    // .footer__contacts
+
+    &__contacts {
+        flex: 1;
+    }
+
+    // .footer__contacts-title
+
+    &__contacts-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--color-text-secondary);
+        margin-bottom: 28px;
+    }
+
+    // .footer__contacts-list
+
+    &__contacts-list {
+        width: 100%;
+    }
+
+    // .footer__contacts-listItem
+
+    &__contacts-listItem {
+        &:not(:last-child) {
+            margin-bottom: 18px;
+        }
+    }
+
+    // .footer__contacts-listLink
+
+    &__contacts-listLink {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        i {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+        }
+    }
+
+    // .footer__contacts-listSpan
+
+    &__contacts-listSpan {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    // .footer__rowBottom
+
+    &__rowBottom {
+        width: 100%;
+        padding-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+            gap: 16px;
+        }
+    }
+
+    // .footer__copyright
+
+    &__copyright {
+        font-size: 14px;
+    }
+
+    // .footer__author-website
+
+    &__author-website {
+        font-size: 14px;
+        transition: color .2s;
+        &:hover {
+            color: var(--color-primary);
+        }
+    }
+}

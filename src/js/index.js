@@ -9,3 +9,6 @@ customSelect();
 
 import mobileMenu from "./modules/mobileMenu";
 mobileMenu();
+
+import phoneFormat from "./modules/phoneFormatter";
+phoneFormat();
