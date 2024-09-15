@@ -1,0 +1,106 @@
+.requirement {
+    width: 100%;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    &__container {}
+
+    // .requirement__rowContent
+
+    &__rowContent {
+        & > div:not(:last-child) {
+            margin-bottom: 52px;
+        }
+    }
+
+    // .requirement__rowHead
+
+    &__rowHead {
+        @include rowHead;
+    }
+
+    // .requirement__rowHead-title
+
+    &__rowHead-title {
+        text-align: center;
+    }
+
+    // .requirement__rowHead-ddescription
+
+    &__rowHead-ddescription {
+        text-align: center;
+    }
+
+    // .requirement__rowBody
+
+    &__rowBody {
+        width: 100%;
+    }
+
+    // .requirement__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 24px;
+        @include small-tablet {
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+
+    // .requirement__item
+
+    &__item {
+        width: 100%;
+        width: 100%;
+    }
+
+    // .requirement__card
+
+    &__card {
+        width: 100%;
+        height: 100%;
+        padding: 24px 24px;
+        display: flex;
+        gap: 24px;
+        border-radius: 24px;
+        border: 1px solid var(--color-separator);
+    }
+
+    // .requirement__card-icon
+
+    &__card-icon {
+        min-width: 43px;
+        height: 100%;
+        max-height: 134px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-size: 22px;
+        color: var(--color-text-secondary);
+        border: 1px solid var(--color-separator);
+        background-color: var(--color-background-secondary);
+    }
+
+    // .requirement__card-info
+
+    &__card-info {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    // .requirement__card-infoName
+
+    &__card-infoName {
+        font-size: 22px;
+        color: var(--color-text-secondary);
+    }
+
+    // .requirement__card-infoText
+
+    &__card-infoText {
+        color: var(--color-text-secondary);
+    }
+}
