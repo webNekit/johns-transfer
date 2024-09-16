@@ -1,0 +1,101 @@
+<header class="website__header header" id="header">
+    <div class="container header__container">
+        <div class="header__rowContent">
+            <div class="header__col header__col--left">
+                <div class="header__logo logo">
+                    <a href="{{ route('page.home') }}" class="logo__link">
+                        <img src="" alt="Логотип сайта John's vip transfer" class="logo__brand">
+                    </a>
+                </div>
+            </div>
+            <div class="header__col header__col--center">
+                <nav class="header__navigation navigation">
+                    <button class="navigation__close-btn">
+                        <i class="ri-close-line"></i>
+                    </button>
+                    <menu class="navigation__menu">
+                        <li class="navigation__menu-item"><a href="./catalog-car.html" class="navigation__menu-link">Парк машин</a></li>
+                        <li class="navigation__menu-item dropdown-link">
+                            <a href="#!" class="navigation__menu-link">Услуги <i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="navigation__submenu">
+                                <li class="navigation__submenu-item">
+                                    <a href="#!" class="navigation__submenu-link">Категория 1 <i class="ri-arrow-right-s-line"></i></a>
+                                    <ul>
+                                        <li>
+                                            <a href="./page-services.html">Подкатегория 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Подкатегория 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Подкатегория 1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navigation__submenu-item">
+                                    <a href="#!" class="navigation__submenu-link">Категория 1 <i class="ri-arrow-right-s-line"></i></a>
+                                    <ul>
+                                        <li>
+                                            <a href="#!">Подкатегория 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Подкатегория 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Подкатегория 1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navigation__submenu-item">
+                                    <a href="#!" class="navigation__submenu-link">Категория 1 <i class="ri-arrow-right-s-line"></i></a>
+                                    <ul>
+                                        <li>
+                                            <a href="#!">Подкатегория 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Подкатегория 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#!">Подкатегория 1</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navigation__menu-item"><a href="./about.html" class="navigation__menu-link">О&#160;нас</a></li>
+                        <li class="navigation__menu-item"><a href="./articles.html" class="navigation__menu-link">Статьи</a></li>
+                        <li class="navigation__menu-item"><a href="./cooperation.html" class="navigation__menu-link">Сотрудничество</a></li>
+                        <li class="navigation__menu-item"><a href="./question.html" class="navigation__menu-link">Вопрос-Ответ</a></li>
+                        <li class="navigation__menu-item"><a href="./contacts.html" class="navigation__menu-link">Контакты</a></li>
+                    </menu>
+                </nav>
+            </div>
+            <div class="header__col header__col--right">
+                <ul class="header__actions">
+                    <li class="header__actions-item">
+                        <button class="header__actions-tool button-call button button--outline" id="buttonCallModal">
+                            Заказать звонок
+                        </button>
+                    </li>
+                    <li class="header__actions-item">
+                        <button class="header__actions-tool button-language" id="buttonLanguage">RU</button>
+                        <ul class="header__actions-languageWrapper" id="languageDropdown">
+                            <li class="header__actions-languageItem">
+                                <button class="header__actions-languageButton">RU</button>
+                            </li>
+                            <li class="header__actions-languageItem">
+                                <button class="header__actions-languageButton">EN</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__actions-item">
+                        <button class="header__actions-tool menu-btn">
+                            <i class="ri-menu-line"></i>
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</header>
