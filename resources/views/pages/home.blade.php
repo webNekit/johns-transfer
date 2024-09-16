@@ -8,7 +8,7 @@
 	<div class="container hero__container">
 		<div class="hero__contentWrapper">
 			<div class="hero__rowHead">
-				<h1 class="hero__superTitle">Бронирование автомобилей бизнес-класса в&#160;казахстане</h1>
+				<h1 class="hero__superTitle">{{ __('intro.introTitle') }}</h1>
 			</div>
 			<div class="hero__rowBody">
 				<div class="hero__banner">

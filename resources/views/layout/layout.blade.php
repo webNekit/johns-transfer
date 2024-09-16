@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicons/favicon.svg') }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/favicons/apple-touch-icon.png') }}">
+    @livewireStyles
 </head>
 <body class="website" id="website">
 @include('includes.header')
@@ -75,5 +76,6 @@
 </div>
 @include('includes.footer')
 <script src={{ asset('assets/js/index.bundle.js') }}></script>
+@livewireScripts
 </body>
 </html>

@@ -19,7 +19,7 @@
                             <a href="#!" class="navigation__menu-link">Услуги <i class="ri-arrow-down-s-line"></i></a>
                             <ul class="navigation__submenu">
                                 <li class="navigation__submenu-item">
-                                    <a href="#!" class="navigation__submenu-link">Категория 1 <i class="ri-arrow-right-s-line"></i></a>
+                                    <a href="#!" class="navigation__submenu-link">Аренда авто<i class="ri-arrow-right-s-line"></i></a>
                                     <ul>
                                         <li>
                                             <a href="./page-services.html">Подкатегория 1</a>
@@ -33,7 +33,7 @@
                                     </ul>
                                 </li>
                                 <li class="navigation__submenu-item">
-                                    <a href="#!" class="navigation__submenu-link">Категория 1 <i class="ri-arrow-right-s-line"></i></a>
+                                    <a href="#!" class="navigation__submenu-link">Категории аренды<i class="ri-arrow-right-s-line"></i></a>
                                     <ul>
                                         <li>
                                             <a href="#!">Подкатегория 1</a>
@@ -47,7 +47,7 @@
                                     </ul>
                                 </li>
                                 <li class="navigation__submenu-item">
-                                    <a href="#!" class="navigation__submenu-link">Категория 1 <i class="ri-arrow-right-s-line"></i></a>
+                                    <a href="#!" class="navigation__submenu-link">Сопутствующие услуги<i class="ri-arrow-right-s-line"></i></a>
                                     <ul>
                                         <li>
                                             <a href="#!">Подкатегория 1</a>
@@ -62,7 +62,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="navigation__menu-item"><a href="./about.html" class="navigation__menu-link">О&#160;нас</a></li>
+                        <li class="navigation__menu-item"><a href="{{ route('page.about') }}" class="navigation__menu-link">О&#160;нас</a></li>
                         <li class="navigation__menu-item"><a href="./articles.html" class="navigation__menu-link">Статьи</a></li>
                         <li class="navigation__menu-item"><a href="./cooperation.html" class="navigation__menu-link">Сотрудничество</a></li>
                         <li class="navigation__menu-item"><a href="./question.html" class="navigation__menu-link">Вопрос-Ответ</a></li>
@@ -77,17 +77,7 @@
                             Заказать звонок
                         </button>
                     </li>
-                    <li class="header__actions-item">
-                        <button class="header__actions-tool button-language" id="buttonLanguage">RU</button>
-                        <ul class="header__actions-languageWrapper" id="languageDropdown">
-                            <li class="header__actions-languageItem">
-                                <button class="header__actions-languageButton">RU</button>
-                            </li>
-                            <li class="header__actions-languageItem">
-                                <button class="header__actions-languageButton">EN</button>
-                            </li>
-                        </ul>
-                    </li>
+                    <livewire:language-switcher />
                     <li class="header__actions-item">
                         <button class="header__actions-tool menu-btn">
                             <i class="ri-menu-line"></i>
