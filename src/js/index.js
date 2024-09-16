@@ -1,9 +1,6 @@
 import dropdown from "./modules/dropdownLanguage";
 dropdown();
 
-import orderTabs from "./modules/orderTabs";
-orderTabs();
-
 import customSelect from "./modules/customSelect";
 customSelect();
 
@@ -17,14 +14,12 @@ import modalFunctionality from "./modules/contactsModal";
 modalFunctionality();
 
 import initAccordion from "./modules/questionsAccordion";
+import IMask from "imask";
 initAccordion();
 
-const element = document.getElementById('contact-phone');
-  const maskOptions = {
-    mask: '+{7}(000)000-00-00'
-  };
-const mask = IMask(element, maskOptions);
-console.log(mask.value);
+document.querySelectorAll('.phone-mask').forEach((e) => {
+  const phoneMask = IMask( e, { mask: '+{7}(000)000-00-00' })
+})
 
 // map init
 let center = [48.8866527839977,2.34310679732974];
