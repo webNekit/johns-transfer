@@ -45,6 +45,7 @@
 	],
 	"dependencies": {
 		"avif-webp-checker": "^1.0.0",
+		"imask": "^7.6.1",
 		"swiper": "^11.0.6"
 	}
 }

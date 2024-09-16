@@ -1,0 +1,183 @@
+.services {
+    width: 100%;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    &__container {
+        max-width: 1140px;
+    }
+
+    // .services__rowContent
+
+    &__rowContent {
+        width: 100%;
+    }
+
+    // .services__headRow
+
+    &__headRow {
+        @include rowHead;
+    }
+
+    // .services__title
+
+    &__title {
+        font-size: 36px;
+        text-align: center;
+        color: var(--color-text-secondary);
+        @include mobile {
+            font-size: 24px;
+        }
+    }
+
+    // .services__text
+
+    &__text {
+        font-size: 20px;
+        text-align: center;
+        color: var(--color-text-secondary);
+        @include mobile {
+            font-size: 18px;
+        }
+    }
+
+    // .services__preview
+
+    &__preview {
+        width: 100%;
+        height: 560px;
+        padding-top: 24px;
+        padding-bottom: 42px;
+    }
+
+    // .services__preview-img
+
+    &__preview-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 18px;
+    }
+
+    // .services__bodyRow
+
+    &__bodyRow {
+        width: 100%;
+        & > *:not(:last-child) {
+            margin-bottom: 24px;
+        }
+    }
+
+    // .services__bodyRow-text
+
+    &__bodyRow-text {
+        padding: 24px 24px;
+        border-radius: 18px;
+        font-size: 18px;
+        color: var(--color-text-secondary);
+        background-color: var(--color-background-secondary);
+        & > *:not(:last-child) {
+            margin-bottom: 18px;
+        }
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+
+    &__order {
+        width: 100%;
+        padding: 24px 24px;
+        border-radius: 18px;
+        background-color: var(--color-background-secondary);
+        &-title {
+            font-size: 26px;
+            color: var(--color-text-secondary);
+            margin-bottom: 32px;
+        }
+        &-form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+        }
+        &-item {
+            flex: 1;
+        }
+        &-label {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        &-input {
+            width: 100%;
+            padding: 14px 14px;
+            border-radius: 25px;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+            border: 1px solid var(--color-separator);
+            outline: none;
+            transition: outline .3s;
+            &:focus {
+                outline: 1px solid var(--color-text-secondary);
+            }
+        }
+        &-button {
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+    // .services__cars
+
+    &__cars {}
+}
+
+.cars-list {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 18px;
+    background-color: var(--color-background-secondary);
+    @include mobile {
+        padding: 8px 8px;
+    }
+    &__item {
+        width: 100%;
+        &:not(:last-child) {
+            .cars-list__card {
+                border-bottom: 1px solid var(--color-separator);
+            }
+        }
+    }
+
+    // .cars-list__item--first
+
+    &__item--first {}
+
+    // .cars-list__card
+
+    &__card {
+        width: 100%;
+        padding: 18px 18px;
+        display: flex;
+        gap: 4px;
+        @include mobile {
+            padding: 8px 8px;
+        }
+    }
+
+    // .cars-list__card-col
+
+    &__card-col {
+        flex: 1;
+        &:first-child {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+}

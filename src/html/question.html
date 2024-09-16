@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,27 +26,18 @@
 	<link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
 	<link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
 </head>
-
 <body class="website" id="website">
 	@@include('blocks/header.html')
 	<div class="website__layout">
 		<main class="website__main main" id="main">
 			<div class="main__wrapper">
-				@@include('blocks/hero.html')
-				@@include('blocks/order-section.html')
-				@@include('blocks/auto-class.html')
-				@@include('blocks/process-works.html')
-				@@include('blocks/advantages.html')
-				@@include('blocks/about.html')
-				@@include('blocks/articles.html')
+				@@include('blocks/questions.html')
 			</div>
 		</main>
 	</div>
-	@@include('blocks/whatsapp-widget.html')
 	@@include('blocks/contacts-modal.html')
 	@@include('blocks/footer.html')
-	<script src="https://unpkg.com/imask"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
 	<script src="./js/index.bundle.js"></script>
 </body>
-
 </html>

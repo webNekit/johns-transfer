@@ -1,0 +1,102 @@
+.questions {
+    width: 100%;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    &__container {
+        max-width: 1140px;
+    }
+
+    // .questions__rowContent
+
+    &__rowContent {
+        & > div:not(:last-child) {
+            margin-bottom: 52px;
+        }
+    }
+
+    // .questions__rowHead
+
+    &__rowHead {
+        @include rowHead;
+    }
+
+    // .questions__rowHead-title
+
+    &__rowHead-title {
+        text-align: center;
+    }
+
+    // .questions__rowHead-description
+
+    &__rowHead-description {
+        text-align: center;
+    }
+
+    // .questions__rowBody
+
+    &__rowBody {
+        width: 100%;
+    }
+
+    // .questions__list
+
+    &__list {
+        width: 100%;
+    }
+
+    // .questions__item
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+    }
+
+    // .questions__card
+
+    &__card {
+        width: 100%;
+        padding: 18px 18px;
+        border-radius: 8px;
+        background-color: var(--color-background-secondary);
+    }
+
+    // .questions__control
+
+    &__control {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0; 
+        transition: padding-bottom 0.3s ease;
+    }
+
+    // .questions__control-text
+
+    &__control-text {
+        font-size: 22px;
+        color: var(--color-text-secondary);
+    }
+
+    // .questions__control-icon
+
+    &__control-icon {
+        font-size: 24px;
+        color: var(--color-text-secondary);
+        transition: transform 0.3s ease; /* Плавный переход для поворота иконки */
+    }
+
+    // .questions__content
+
+    &__content {
+        padding: 0;
+        max-height: 0; /* Скрываем контент */
+        overflow: hidden; /* Скрываем лишний контент при закрытии */
+        transition: max-height 0.3s ease; /* Плавный переход для высоты */
+    }
+
+    // .questions__content-text
+
+    &__content-text {}
+}
