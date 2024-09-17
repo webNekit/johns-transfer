@@ -14,6 +14,8 @@ class Service extends Model
         'short_info_ru', 'short_info_en',
         'full_info_ru', 'full_info_en',
         'cars', 'image', 'is_active',
+        'keywords_ru', 'keywords_en',
+        'icon',
     ];
 
     protected $casts = [

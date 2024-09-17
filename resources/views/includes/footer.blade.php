@@ -13,17 +13,7 @@
                 <ul class="footer__socials">
                     <li class="footer__socials-item">
                         <a href="#!" target="_blank" class="footer__socials-link">
-                            <i class="ri-telegram-2-fill"></i>
-                        </a>
-                    </li>
-                    <li class="footer__socials-item">
-                        <a href="#!" target="_blank" class="footer__socials-link">
-                            <i class="ri-telegram-2-fill"></i>
-                        </a>
-                    </li>
-                    <li class="footer__socials-item">
-                        <a href="#!" target="_blank" class="footer__socials-link">
-                            <i class="ri-telegram-2-fill"></i>
+                            <img src="{{ asset('assets/img/social-wp.png') }}" alt="" class="footer__socials-icon">
                         </a>
                     </li>
                 </ul>
@@ -55,7 +45,7 @@
                                 <a href="#!" class="footer__nav-menuLink">Категории аренды</a>
                             </li>
                             <li class="footer__nav-menuItem">
-                                <a href="#!" class="footer__nav-menuLink">Статьи</a>
+                                <a href="#!" class="footer__nav-menuLink">Сопутствующие услуги</a>
                             </li>
                         </menu>
                     </div>

@@ -2,9 +2,10 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\CarClassResource\Pages;
-use App\Models\CarClass;
+use App\Filament\Resources\ServiceResource\Pages;
+use App\Filament\Resources\ServiceResource\RelationManagers;
 use App\Models\Car;
+use App\Models\Service;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
@@ -14,24 +15,28 @@ use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\BooleanColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class CarClassResource extends Resource
+class ServiceResource extends Resource
 {
-    protected static ?string $model = CarClass::class;
+    protected static ?string $model = Service::class;
 
     public static function getNavigationLabel(): string
     {
-        return 'Классы авто';
+        return 'Категории аренды';
     }
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Forms\Form $form): Forms\Form
+    public static function form(Form $form): Form
     {
         return $form
             ->schema([
@@ -97,10 +102,6 @@ class CarClassResource extends Resource
                         ]),
                 ])->columnSpanFull(),
                 Section::make('Изображение и медиа')->schema([
-                    FileUpload::make('icon')
-                        ->image()
-                        ->directory('classs/icon')
-                        ->label('Иконка класса'),
                     FileUpload::make('image')
                         ->image()
                         ->directory('classs')
@@ -131,28 +132,13 @@ class CarClassResource extends Resource
                         ])
                         ->columns(4),
                 ])->columnSpanFull(),
-                Section::make('Мета-поля')->schema([
-                    Tabs::make('tabs')
-                        ->tabs([
-                            Tabs\Tab::make('Ключевые слова (Русский)')->schema([
-                                TextInput::make('keywords_ru')
-                                ->label('Ключевые слова')
-                                ->required(),
-                            ]),
-                            Tabs\Tab::make('Ключевые слова (Английский)')->schema([
-                                TextInput::make('keywords_en')
-                                ->label('Ключевые слова')
-                                ->required(),
-                            ]),
-                        ]),
-                ])->columnSpanFull(),
                 Toggle::make('is_active')
                     ->label('Активен')
                     ->default(true),
             ]);
     }
 
-    public static function table(Tables\Table $table): Tables\Table
+    public static function table(Table $table): Table
     {
         return $table
             ->columns([
@@ -164,15 +150,33 @@ class CarClassResource extends Resource
                     ->size(50),
                 BooleanColumn::make('is_active')
                     ->label('Активен'),
+            ])
+            ->filters([
+                //
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make(),
+            ])
+            ->bulkActions([
+                Tables\Actions\BulkActionGroup::make([
+                    Tables\Actions\DeleteBulkAction::make(),
+                ]),
             ]);
+    }
+
+    public static function getRelations(): array
+    {
+        return [
+            //
+        ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCarClasses::route('/'),
-            'create' => Pages\CreateCarClass::route('/create'),
-            'edit' => Pages\EditCarClass::route('/{record}/edit'),
+            'index' => Pages\ListServices::route('/'),
+            'create' => Pages\CreateService::route('/create'),
+            'edit' => Pages\EditService::route('/{record}/edit'),
         ];
     }
 }

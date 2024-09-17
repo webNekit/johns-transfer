@@ -55,6 +55,9 @@ class CarResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('brand')
+                    ->formatStateUsing(function ($record) {
+                        return "{$record->brand} {$record->model} ({$record->year})";
+                    })
                     ->label('Название класса'),
             ])
             ->filters([
