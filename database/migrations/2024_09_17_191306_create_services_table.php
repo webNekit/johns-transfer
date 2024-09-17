@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('car_classes', function (Blueprint $table) {
+        Schema::create('services', function (Blueprint $table) {
             $table->id();
-            $table->string('name_ru'); // Название класса на русском языке
-            $table->string('name_en'); // Название класса на английском языке
+            $table->string('name_ru'); // Название на русском
+            $table->string('name_en'); // Название на английском
             $table->text('short_info_ru')->nullable(); // Краткая информация на русском
             $table->text('short_info_en')->nullable(); // Краткая информация на английском
             $table->longText('full_info_ru')->nullable(); // Полная информация на русском
             $table->longText('full_info_en')->nullable(); // Полная информация на английском
-            $table->json('cars')->nullable(); // JSON поле для списка машин и их цен
+            $table->json('cars')->nullable(); // JSON поле для списка машин и их цен (по аналогии с классами)
             $table->string('image')->nullable(); // Поле для изображения
             $table->boolean('is_active')->default(true); // Поле для статуса
             $table->timestamps();
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('car_classes');
+        Schema::dropIfExists('services');
     }
 };
