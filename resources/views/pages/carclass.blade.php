@@ -1,22 +1,22 @@
 @extends('layout.layout') 
-@section('title', $service->name) 
-@section('description', $service->short_info) 
-@section('keywords', $service->keywords) 
-@section('image', url('storage', $service->image)) 
+@section('title', $carClass->name) 
+@section('description', $carClass->short_info) 
+@section('keywords', $carClass->keywords) 
+@section('image', url('storage', $carClass->image)) 
 @section('content')
 <section class="main__wrapperSection services" id="services">
 	<div class="container services__container">
 		<div class="services__rowContent">
 			<div class="services__headRow">
-				<h2 class="services__title">{{ $service->name }}</h2>
-				<p class="services__text">{{ $service->short_info }}</p>
+				<h2 class="services__title">{{ $carClass->name }}</h2>
+				<p class="services__text">{{ $carClass->short_info }}</p>
 			</div>
 			<div class="services__preview">
-				<img loading="lazy" src="{{ url('storage', $service->image) }}" alt="" class="services__preview-img" />
+				<img loading="lazy" src="{{ url('storage', $carClass->image) }}" alt="" class="services__preview-img" />
 			</div>
 			<div class="services__bodyRow">
 				<div class="services__bodyRow-text">
-					{!! $service->full_info !!}
+					{!! $carClass->full_info !!}
 				</div>
 				<ul class="services__cars cars-list">
 					<li class="cars-list__item cars-list__item--first">
@@ -27,7 +27,7 @@
 							<div class="cars-list__card-col">Трансфер</div>
 						</div>
 					</li>
-					@foreach($service->cars as $car) 
+					@foreach($carClass->cars as $car) 
                     @php
                         $carInfo = \App\Models\Car::find($car['car_id']); 
                     @endphp
@@ -41,7 +41,7 @@
 					</li>
 					@endforeach
 				</ul>
-				<livewire:order-form :carClass="$service" />
+				<livewire:order-form :carClass="$carClass" />
 			</div>
 		</div>
 	</div>

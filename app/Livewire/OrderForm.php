@@ -8,7 +8,6 @@ use Livewire\Component;
 
 class OrderForm extends Component
 {
-
     public $carClass; // Это свойство для хранения данных о классе автомобиля
     public $location;
     public $full_name;
@@ -31,15 +30,19 @@ class OrderForm extends Component
 
         // ID вашего канала
         $telegramChatId = '-1002314766272';
+        
+        // Получаем email из .env
+        $email = env('MAIL_TO_ADDRESS', 'nayskom@gmail.com');
 
-        // Отправка уведомления в Telegram
+        // Отправка уведомлений (на почту и в Telegram)
         Notification::route('telegram', $telegramChatId)
+            ->route('mail', $email)
             ->notify(new SendTelegramNotification($this->location, $this->full_name, $this->phone, $this->carClass->name_ru));
 
         // Очистка формы
         $this->reset(['location', 'full_name', 'phone']);
 
-        session()->flash('success', 'Заявка отправлена в Telegram!');
+        session()->flash('success', 'Заявка отправлена в Telegram и на почту!');
     }
 
     public function render()

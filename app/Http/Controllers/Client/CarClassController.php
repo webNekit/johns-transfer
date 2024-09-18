@@ -10,7 +10,7 @@ class CarClassController extends Controller
 {
     public function index(CarClass $carClass)
     {
-        return view('pages.service', [
+        return view('pages.carclass', [
             'carClass' => $carClass,
         ]);
     }

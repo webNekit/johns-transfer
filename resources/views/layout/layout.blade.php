@@ -36,7 +36,7 @@
     </div>
     <div class="whatsapp-widget">
     <a href="" target="_blank" class="whatsapp-widget__button">
-        <img loading="lazy" src="./img/social-wp.png" alt="Логотип whatsapp" class="whatsapp-widget__button-icon">
+        <img loading="lazy" src="{{ asset('assets/img/social-wp.png') }}" alt="Логотип whatsapp" class="whatsapp-widget__button-icon">
     </a>
 </div>
 <div class="contacts-modal" id="contacts-modal">

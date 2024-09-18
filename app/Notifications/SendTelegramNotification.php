@@ -30,18 +30,32 @@ class SendTelegramNotification extends Notification
 
     /**
      * Get the notification's delivery channels.
-     *
-     * @return array<int, string>
      */
-    public function via(object $notifiable): array
+    public function via($notifiable)
     {
-        return ['telegram'];
+        return ['mail', 'telegram'];
     }
 
     /**
      * Get the mail representation of the notification.
      */
-    public function toTelegram(object $notifiable): TelegramMessage
+    public function toMail($notifiable)
+    {
+        return (new MailMessage)
+            ->subject('Новая заявка на услугу')
+            ->greeting('Здравствуйте!')
+            ->line('Поступила новая заявка на услугу.')
+            ->line("Местоположение: {$this->location}")
+            ->line("Имя: {$this->full_name}")
+            ->line("Телефон: {$this->phone}")
+            ->line("Класс автомобиля: {$this->carClassName}")
+            ->line('Спасибо за использование нашего сервиса!');
+    }
+
+    /**
+     * Get the telegram representation of the notification.
+     */
+    public function toTelegram($notifiable)
     {
         return TelegramMessage::create()
             ->content("Новая заявка на услугу!\n\n" .
@@ -53,13 +67,11 @@ class SendTelegramNotification extends Notification
 
     /**
      * Get the array representation of the notification.
-     *
-     * @return array<string, mixed>
      */
-    public function toArray(object $notifiable): array
+    public function toArray($notifiable)
     {
         return [
-            //
+            // Можно добавить дополнительные данные
         ];
     }
 }

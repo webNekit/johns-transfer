@@ -14,28 +14,18 @@
         <li class="navigation__submenu-item">
             <a href="#!" class="navigation__submenu-link">Категории аренды<i class="ri-arrow-right-s-line"></i></a>
             <ul>
-                <li>
-                    <a href="#!">Подкатегория 1</a>
-                </li>
-                <li>
-                    <a href="#!">Подкатегория 1</a>
-                </li>
-                <li>
-                    <a href="#!">Подкатегория 1</a>
-                </li>
+                @foreach ($services as $service)
+                    <li>
+                        <a href="{{ route('page.service', $service->id) }}">{{ $service->name }}</a>
+                    </li>
+                @endforeach
             </ul>
         </li>
         <li class="navigation__submenu-item">
             <a href="#!" class="navigation__submenu-link">Сопутствующие услуги<i class="ri-arrow-right-s-line"></i></a>
             <ul>
                 <li>
-                    <a href="#!">Подкатегория 1</a>
-                </li>
-                <li>
-                    <a href="#!">Подкатегория 1</a>
-                </li>
-                <li>
-                    <a href="#!">Подкатегория 1</a>
+                    <a href="#">Подкатегория 1</a>
                 </li>
             </ul>
         </li>

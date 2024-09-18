@@ -104,7 +104,7 @@ class ServiceResource extends Resource
                 Section::make('Изображение и медиа')->schema([
                     FileUpload::make('image')
                         ->image()
-                        ->directory('classs')
+                        ->directory('services')
                         ->label('Изображение'),
                 ])->columnSpanFull(),
                 Section::make('Автомобили')->schema([
@@ -131,6 +131,21 @@ class ServiceResource extends Resource
                                 ->required(),
                         ])
                         ->columns(4),
+                ])->columnSpanFull(),
+                Section::make('Мета-поля')->schema([
+                    Tabs::make('tabs')
+                        ->tabs([
+                            Tabs\Tab::make('Ключевые слова (Русский)')->schema([
+                                TextInput::make('keywords_ru')
+                                ->label('Ключевые слова')
+                                ->required(),
+                            ]),
+                            Tabs\Tab::make('Ключевые слова (Английский)')->schema([
+                                TextInput::make('keywords_en')
+                                ->label('Ключевые слова')
+                                ->required(),
+                            ]),
+                        ]),
                 ])->columnSpanFull(),
                 Toggle::make('is_active')
                     ->label('Активен')
