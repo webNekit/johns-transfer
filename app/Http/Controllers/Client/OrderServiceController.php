@@ -11,7 +11,7 @@ class OrderServiceController extends Controller
     public function index(OrderService $orderService)
     {
         return view('pages.order-service', [
-            'orderService' => $orderService,
+            'service' => $orderService,
         ]);
     }
 }

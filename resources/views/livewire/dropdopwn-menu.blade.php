@@ -24,9 +24,11 @@
         <li class="navigation__submenu-item">
             <a href="#!" class="navigation__submenu-link">Сопутствующие услуги<i class="ri-arrow-right-s-line"></i></a>
             <ul>
-                <li>
-                    <a href="#">Подкатегория 1</a>
-                </li>
+                @foreach ($otherServices as $service)
+                    <li>
+                        <a href="{{ route('page.otherService', $service->id) }}">{{ $service->name }}</a>
+                    </li>
+                @endforeach
             </ul>
         </li>
     </ul>

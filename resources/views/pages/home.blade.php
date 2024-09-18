@@ -4,20 +4,7 @@
 @section('keywords', 'Ключевые поля для заполнения')
 @section('image', 'Изображение')
 @section('content')
-<section class="main__wrapperSection hero" id="hero">
-	<div class="container hero__container">
-		<div class="hero__contentWrapper">
-			<div class="hero__rowHead">
-				<h1 class="hero__superTitle">{{ __('intro.introTitle') }}</h1>
-			</div>
-			<div class="hero__rowBody">
-				<div class="hero__banner">
-					<img loading="lazy" src="./img/hero-img-2.png" alt="" class="hero__bannerImg" />
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
+<livewire:hero-section />
 <section class="main__wrapperSection order" id="order">
 	<div class="container order__container">
 		<div class="order__wrapper tab-container">
@@ -117,49 +104,7 @@
 		</div>
 	</div>
 </section>
-<section class="main__wrapperSection advantages" id="advantages">
-	<div class="container advantages__container">
-		<div class="advantages__rowContent">
-			<div class="advantages__rowHead">
-				<h2 class="advantages__rowHead-title headSection-title">Наши преимущества</h2>
-				<p class="advantages__rowHead-description headSection-description">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sint labore ut&#160;hic autem quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sint labore ut&#160;hic autem quasi.
-				</p>
-			</div>
-			<div class="advantages__rowBody">
-				<ul class="advantages__list">
-					<li class="advantages__list-item">
-						<div class="advantages__list-card">
-							<div class="advantages__list-cardIcon">
-								<i class="ri-bard-fill"></i>
-							</div>
-							<h3 class="advantages__list-cardName">Lorem ipsum dolor sit.</h3>
-							<p class="advantages__list-cardText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, expedita? A, aspernatur.</p>
-						</div>
-					</li>
-					<li class="advantages__list-item">
-						<div class="advantages__list-card">
-							<div class="advantages__list-cardIcon">
-								<i class="ri-bard-fill"></i>
-							</div>
-							<h3 class="advantages__list-cardName">Lorem ipsum dolor sit.</h3>
-							<p class="advantages__list-cardText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, expedita? A, aspernatur.</p>
-						</div>
-					</li>
-					<li class="advantages__list-item">
-						<div class="advantages__list-card">
-							<div class="advantages__list-cardIcon">
-								<i class="ri-bard-fill"></i>
-							</div>
-							<h3 class="advantages__list-cardName">Lorem ipsum dolor sit.</h3>
-							<p class="advantages__list-cardText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, expedita? A, aspernatur.</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
+<livewire:section.advantages-section />
 <section class="main__wrapperSection about" id="about">
 	<div class="container about__container">
 		<div class="about__rowContent">

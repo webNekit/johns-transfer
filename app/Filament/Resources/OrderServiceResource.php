@@ -2,13 +2,11 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ServiceResource\Pages;
-use App\Filament\Resources\ServiceResource\RelationManagers;
-use App\Models\Car;
-use App\Models\Service;
+use App\Filament\Resources\OrderServiceResource\Pages;
+use App\Filament\Resources\OrderServiceResource\RelationManagers;
+use App\Models\OrderService;
 use Filament\Forms;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Tabs;
@@ -18,20 +16,18 @@ use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Columns\BooleanColumn;
-use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ServiceResource extends Resource
+class OrderServiceResource extends Resource
 {
-    protected static ?string $model = Service::class;
+    protected static ?string $model = OrderService::class;
 
     public static function getNavigationLabel(): string
     {
-        return 'Категории аренды';
+        return 'Сопутствующие услуги';
     }
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
@@ -104,46 +100,21 @@ class ServiceResource extends Resource
                 Section::make('Изображение и медиа')->schema([
                     FileUpload::make('image')
                         ->image()
-                        ->directory('services')
+                        ->directory('other-service')
                         ->label('Изображение'),
-                ])->columnSpanFull(),
-                Section::make('Автомобили')->schema([
-                    Repeater::make('cars')
-                        ->label('Автомобили и цены')
-                        ->schema([
-                            Forms\Components\Select::make('car_id')
-                                ->label('Авто')
-                                ->options(Car::all()->mapWithKeys(function ($car) {
-                                    return [$car->id => "{$car->brand} - {$car->model} ({$car->year})"];
-                                }))
-                                ->required(),
-                            TextInput::make('price_one')
-                                ->label('Цена от часа')
-                                ->numeric()
-                                ->required(),
-                            TextInput::make('price_two')
-                                ->label('Цена от 12 часов')
-                                ->numeric()
-                                ->required(),
-                            TextInput::make('price_three')
-                                ->label('Трансфер')
-                                ->numeric()
-                                ->required(),
-                        ])
-                        ->columns(4),
                 ])->columnSpanFull(),
                 Section::make('Мета-поля')->schema([
                     Tabs::make('tabs')
                         ->tabs([
                             Tabs\Tab::make('Ключевые слова (Русский)')->schema([
                                 TextInput::make('keywords_ru')
-                                ->label('Ключевые слова')
-                                ->required(),
+                                    ->label('Ключевые слова')
+                                    ->required(),
                             ]),
                             Tabs\Tab::make('Ключевые слова (Английский)')->schema([
                                 TextInput::make('keywords_en')
-                                ->label('Ключевые слова')
-                                ->required(),
+                                    ->label('Ключевые слова')
+                                    ->required(),
                             ]),
                         ]),
                 ])->columnSpanFull(),
@@ -159,12 +130,6 @@ class ServiceResource extends Resource
             ->columns([
                 TextColumn::make('name_ru')
                     ->label('Название класса'),
-                ImageColumn::make('image')
-                    ->label('Изображение')
-                    ->circular()
-                    ->size(50),
-                BooleanColumn::make('is_active')
-                    ->label('Активен'),
             ])
             ->filters([
                 //
@@ -189,9 +154,9 @@ class ServiceResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListServices::route('/'),
-            'create' => Pages\CreateService::route('/create'),
-            'edit' => Pages\EditService::route('/{record}/edit'),
+            'index' => Pages\ListOrderServices::route('/'),
+            'create' => Pages\CreateOrderService::route('/create'),
+            'edit' => Pages\EditOrderService::route('/{record}/edit'),
         ];
     }
 }

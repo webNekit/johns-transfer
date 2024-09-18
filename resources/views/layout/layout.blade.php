@@ -53,23 +53,7 @@
                     <h2 class="contacts-modal__title">Закажите звонок</h2>
                     <h3 class="contacts-modal__subtitle">и&#160;мы&#160;ответим в&#160;кратчайшие сроки</h3>
                 </div>
-                <form class="contacts-modal__form">
-                    <div class="contacts-modal__form-item">
-                        <label for="name-input" class="contacts-modal__form-label">Введите ваше имя</label>
-                        <input type="text" class="contacts-modal__form-input" id="name-input" placeholder="Иван Иванович" required>
-                    </div>
-                    <div class="contacts-modal__form-item">
-                        <label for="contact-phone" class="contacts-modal__form-label">Введите ваш телефон</label>
-                        <input type="tel" class="contacts-modal__form-input phone-mask" id="contact-phone" placeholder="7900800300" required>
-                    </div>
-                    <div class="contacts-modal__form-item">
-                        <label for="" class="contacts-modal__form-label">Введите вашу почту</label>
-                        <input type="email" class="contacts-modal__form-input" id="name-input" placeholder="user@example.com" required>
-                    </div>
-                    <div class="contacts-modal__form-item">
-                        <button class="contacts-modal__form-button button button--primary">Отправить заявку</button>
-                    </div>
-                </form>
+                <livewire:contacts-modal />
             </div>
         </div>
     </div>

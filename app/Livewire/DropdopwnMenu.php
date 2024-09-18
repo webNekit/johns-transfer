@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\CarClass;
+use App\Models\OrderService;
 use App\Models\Service;
 use Livewire\Attributes\Computed;
 use Livewire\Component;
@@ -38,11 +39,26 @@ class DropdopwnMenu extends Component
         return $services;
     }
 
+    #[Computed()]
+    public function otherServices()
+    {
+        $otherServices = OrderService::where('is_active', true)
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        if ($otherServices->isEmpty()) {
+            return null;
+        }
+
+        return $otherServices;
+    }
+
     public function render()
     {
         return view('livewire.dropdopwn-menu', [
             'carClass' => $this->carClass(),
             'services' => $this->services(),
+            'otherServices' => $this->otherServices(),
         ]);
     }
 }
