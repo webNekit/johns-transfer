@@ -2269,6 +2269,11 @@ pre.code {
   flex-direction: column;
   row-gap: 32px;
 }
+
+.single-article__head-content .headSection-description {
+  text-align: center;
+}
+
 .single-article__title {
   font-size: 36px;
   font-weight: 500;
