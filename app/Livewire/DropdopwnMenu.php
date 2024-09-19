@@ -15,7 +15,7 @@ class DropdopwnMenu extends Component
     public function carClass()
     {
         $carClasses = CarClass::where('is_active', true)
-            ->orderBy('created_at', 'desc')
+            ->orderBy('created_at', 'asc')
             ->get();
 
         if ($carClasses->isEmpty()) {
