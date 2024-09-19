@@ -6,7 +6,7 @@
 				<p class="about__subtext headSection-description">{{ $description }}</p>
 			</div>
 			<div class="about__rowBody">
-				<img loading="lazy" src="{{ url('storage', $image) }}" alt="" class="about__rowBody-img" />
+				<img src="{{ url('storage', $image) }}" alt="" class="about__rowBody-img" />
 			</div>
 		</div>
 	</div>

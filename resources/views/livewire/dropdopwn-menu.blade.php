@@ -1,8 +1,8 @@
 <li class="navigation__menu-item dropdown-link">
-    <a href="#!" class="navigation__menu-link">Услуги <i class="ri-arrow-down-s-line"></i></a>
+    <a href="#!" class="navigation__menu-link">{{ __('menu.services') }} <i class="ri-arrow-down-s-line"></i></a>
     <ul class="navigation__submenu">
         <li class="navigation__submenu-item">
-            <a href="#!" class="navigation__submenu-link">Аренда авто<i class="ri-arrow-right-s-line"></i></a>
+            <a href="#!" class="navigation__submenu-link">{{ __('menu.rent_car') }}<i class="ri-arrow-right-s-line"></i></a>
             <ul>
                 @foreach ($carClass as $carClassItem)
                     <li>
@@ -12,7 +12,7 @@
             </ul>
         </li>
         <li class="navigation__submenu-item">
-            <a href="#!" class="navigation__submenu-link">Категории аренды<i class="ri-arrow-right-s-line"></i></a>
+            <a href="#!" class="navigation__submenu-link">{{ __('menu.rental_categories') }}<i class="ri-arrow-right-s-line"></i></a>
             <ul>
                 @foreach ($services as $service)
                     <li>
@@ -22,7 +22,7 @@
             </ul>
         </li>
         <li class="navigation__submenu-item">
-            <a href="#!" class="navigation__submenu-link">Сопутствующие услуги<i class="ri-arrow-right-s-line"></i></a>
+            <a href="#!" class="navigation__submenu-link">{{ __('menu.related_services') }}<i class="ri-arrow-right-s-line"></i></a>
             <ul>
                 @foreach ($otherServices as $service)
                     <li>

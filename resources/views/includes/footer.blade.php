@@ -4,7 +4,6 @@
             <div class="footer__left">
                 <livewire:widget.site-info />
                 <livewire:widget.socials />
-                {{-- <a href="#!" class="footer__politics-link">Пользовательское соглашение</a> --}}
             </div>
             <div class="footer__right">
                 <nav class="footer__nav">
@@ -12,27 +11,26 @@
                         <h3 class="footer__nav-title">Меню</h3>
                         <menu class="footer__nav-menu">
                             <li class="footer__nav-menuItem">
-                                <a href="{{ route('page.about') }}" class="footer__nav-menuLink">О&#160;нас</a>
+                                <a href="{{ route('page.about') }}" class="footer__nav-menuLink">{{ __('menu.about_us') }}</a>
                             </li>
                             <li class="footer__nav-menuItem">
-                                <a href="{{ route('page.contacts') }}" class="footer__nav-menuLink">Контакты</a>
+                                <a href="{{ route('page.contacts') }}" class="footer__nav-menuLink">{{ __('menu.contacts') }}</a>
                             </li>
                             <li class="footer__nav-menuItem">
-                                <a href="#" class="footer__nav-menuLink">Статьи</a>
+                                <a href="{{ route('page.catalog') }}" class="footer__nav-menuLink">{{ __('menu.fleet_of_cars') }}</a>
                             </li>
                         </menu>
                     </div>
                     <div class="footer__nav-item">
-                        <h3 class="footer__nav-title">Услуги</h3>
                         <menu class="footer__nav-menu">
                             <li class="footer__nav-menuItem">
-                                <a href="#!" class="footer__nav-menuLink">Аренда авто</a>
+                                <a href="{{ route('page.cooperation') }}" class="footer__nav-menuLink">{{ __('menu.cooperation') }}</a>
                             </li>
                             <li class="footer__nav-menuItem">
-                                <a href="#!" class="footer__nav-menuLink">Категории аренды</a>
+                                <a href="{{ route('page.questions') }}" class="footer__nav-menuLink">{{ __('menu.question') }}</a>
                             </li>
                             <li class="footer__nav-menuItem">
-                                <a href="#!" class="footer__nav-menuLink">Сопутствующие услуги</a>
+                                <a href="{{ route('page.articles') }}" class="footer__nav-menuLink">{{ __('menu.articles') }}</a>
                             </li>
                         </menu>
                     </div>
