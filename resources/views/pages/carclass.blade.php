@@ -33,7 +33,7 @@
                     @endphp
 					<li class="cars-list__item">
 						<div class="cars-list__card">
-							<div class="cars-list__card-col">{{ $carInfo->brand }} {{ $carInfo->model }} {{ $carInfo->year }}</div>
+							<div class="cars-list__card-col">{{ $carInfo->brand }} {{ $carInfo->model }}</div>
 							<div class="cars-list__card-col">от {{ $car['price_one'] }} тг.</div>
 							<div class="cars-list__card-col">от {{ $car['price_two'] }} тг.</div>
 							<div class="cars-list__card-col">от {{ $car['price_three'] }} тг.</div>
