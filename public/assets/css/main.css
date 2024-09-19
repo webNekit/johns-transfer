@@ -1649,7 +1649,7 @@ pre.code {
   }
 }
 .navigation__submenu-item ul li {
-  display: inline-block;
+  display: block;
 }
 .navigation__submenu-item ul li:not(:last-child) {
   margin-bottom: 10px;
