@@ -2,22 +2,9 @@
     <div class="container footer__container">
         <div class="footer__rowTop">
             <div class="footer__left">
-                <div class="footer__logo logo">
-                    <a href="{{ route('page.home') }}" class="logo__link">
-                        <img src="" alt="Логотип сайта John's vip transfer" class="logo__brand">
-                    </a>
-                </div>
-                <p class="footer__about-company">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ex&#160;veniam placeat magnam exercitationem aperiam.
-                </p>
-                <ul class="footer__socials">
-                    <li class="footer__socials-item">
-                        <a href="#!" target="_blank" class="footer__socials-link">
-                            <img src="{{ asset('assets/img/social-wp.png') }}" alt="" class="footer__socials-icon">
-                        </a>
-                    </li>
-                </ul>
-                <a href="#!" class="footer__politics-link">Пользовательское соглашение</a>
+                <livewire:widget.site-info />
+                <livewire:widget.socials />
+                {{-- <a href="#!" class="footer__politics-link">Пользовательское соглашение</a> --}}
             </div>
             <div class="footer__right">
                 <nav class="footer__nav">
@@ -25,13 +12,13 @@
                         <h3 class="footer__nav-title">Меню</h3>
                         <menu class="footer__nav-menu">
                             <li class="footer__nav-menuItem">
-                                <a href="#!" class="footer__nav-menuLink">О&#160;нас</a>
+                                <a href="{{ route('page.about') }}" class="footer__nav-menuLink">О&#160;нас</a>
                             </li>
                             <li class="footer__nav-menuItem">
-                                <a href="#!" class="footer__nav-menuLink">Контакты</a>
+                                <a href="{{ route('page.contacts') }}" class="footer__nav-menuLink">Контакты</a>
                             </li>
                             <li class="footer__nav-menuItem">
-                                <a href="#!" class="footer__nav-menuLink">Статьи</a>
+                                <a href="#" class="footer__nav-menuLink">Статьи</a>
                             </li>
                         </menu>
                     </div>
@@ -52,26 +39,7 @@
                 </nav>
                 <div class="footer__contacts">
                     <h3 class="footer__contacts-title">Контакты</h3>
-                    <ul class="footer__contacts-list">
-                        <li class="footer__contacts-listItem">
-                            <a href="tel:+79692881531" class="footer__contacts-listLink">
-                                <i class="ri-phone-line"></i>
-                                <span class="footer__contacts-listSpan" data-phone-number="79692881531"></span>
-                            </a>
-                        </li>
-                        <li class="footer__contacts-listItem">
-                            <a href="mailto:nayskom@gmail.com" class="footer__contacts-listLink">
-                                <i class="ri-mail-line"></i>
-                                <span class="footer__contacts-listSpan">nayskom@gmail.com</span>
-                            </a>
-                        </li>
-                        <li class="footer__contacts-listItem">
-                            <a href="https://yandex.ru/maps/-/CDDwYVYF" target="_blank" class="footer__contacts-listLink">
-                                <i class="ri-map-pin-line"></i>
-                                <span class="footer__contacts-listSpan">проспект Турара Рыскулова, 140/4, Алматы</span>
-                            </a>
-                        </li>
-                    </ul>
+                    <livewire:widget.contacts />
                 </div>
             </div>
         </div>

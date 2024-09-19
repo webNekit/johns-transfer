@@ -48,7 +48,7 @@ class SendTelegramNotification extends Notification
             ->line("Местоположение: {$this->location}")
             ->line("Имя: {$this->full_name}")
             ->line("Телефон: {$this->phone}")
-            ->line("Класс автомобиля: {$this->carClassName}")
+            ->line("Услуга: {$this->carClassName}")
             ->line('Спасибо за использование нашего сервиса!');
     }
 
@@ -62,7 +62,7 @@ class SendTelegramNotification extends Notification
                       "Местоположение: {$this->location}\n" .
                       "Имя: {$this->full_name}\n" .
                       "Телефон: {$this->phone}\n" .
-                      "Класс автомобиля: {$this->carClassName}");
+                      "Услуга: {$this->carClassName}");
     }
 
     /**

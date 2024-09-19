@@ -14,13 +14,13 @@
                         <i class="ri-close-line"></i>
                     </button>
                     <menu class="navigation__menu">
-                        <li class="navigation__menu-item"><a href="./catalog-car.html" class="navigation__menu-link">Парк машин</a></li>
+                        <li class="navigation__menu-item"><a href="{{ route('page.catalog') }}" class="navigation__menu-link">Парк машин</a></li>
                         <livewire:dropdopwn-menu />
                         <li class="navigation__menu-item"><a href="{{ route('page.about') }}" class="navigation__menu-link">О&#160;нас</a></li>
-                        <li class="navigation__menu-item"><a href="./articles.html" class="navigation__menu-link">Статьи</a></li>
-                        <li class="navigation__menu-item"><a href="./cooperation.html" class="navigation__menu-link">Сотрудничество</a></li>
-                        <li class="navigation__menu-item"><a href="./question.html" class="navigation__menu-link">Вопрос-Ответ</a></li>
-                        <li class="navigation__menu-item"><a href="./contacts.html" class="navigation__menu-link">Контакты</a></li>
+                        <li class="navigation__menu-item"><a href="{{ route('page.articles') }}" class="navigation__menu-link">Статьи</a></li>
+                        <li class="navigation__menu-item"><a href="{{ route('page.cooperation') }}" class="navigation__menu-link">Сотрудничество</a></li>
+                        <li class="navigation__menu-item"><a href="{{ route('page.questions') }}" class="navigation__menu-link">Вопрос-Ответ</a></li>
+                        <li class="navigation__menu-item"><a href="{{ route('page.contacts') }}" class="navigation__menu-link">Контакты</a></li>
                     </menu>
                 </nav>
             </div>

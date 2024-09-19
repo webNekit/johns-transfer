@@ -42,7 +42,7 @@ class OrderForm extends Component
         // Очистка формы
         $this->reset(['location', 'full_name', 'phone']);
 
-        session()->flash('success', 'Заявка отправлена в Telegram и на почту!');
+        session()->flash('success', 'Ваша заявка успешно отправлена!');
     }
 
     public function render()

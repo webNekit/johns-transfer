@@ -38,7 +38,7 @@ class ContactsModal extends Component
             'text' => $message,
         ]);
 
-        session()->flash('message', 'Заявка отправлена успешно!');
+        session()->flash('message', 'Ваша заявка успешно отправлена!');
         $this->reset();
     }
 

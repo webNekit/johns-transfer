@@ -34,8 +34,7 @@ class SiteSettingsResource extends Resource
     {
         return $form
             ->schema([
-                // Hero Section
-                Forms\Components\Section::make('Hero')
+                Forms\Components\Section::make('Раздел - Главная секция')
                     ->schema([
                         Forms\Components\Tabs::make('hero')
                             ->tabs([
@@ -59,7 +58,7 @@ class SiteSettingsResource extends Resource
                     ]),
 
                 // Catalog Section
-                Forms\Components\Section::make('Catalog')
+                Forms\Components\Section::make('Раздел - Парк автомобилей')
                     ->schema([
                         Forms\Components\Tabs::make('catalog')
                             ->tabs([
@@ -85,7 +84,7 @@ class SiteSettingsResource extends Resource
                     ]),
 
                 // Process Section
-                Forms\Components\Section::make('Process')
+                Forms\Components\Section::make('Раздел - Процесс работы')
                     ->schema([
                         Forms\Components\Tabs::make('process')
                             ->tabs([
@@ -109,14 +108,14 @@ class SiteSettingsResource extends Resource
                                     ]),
                             ]),
                             Forms\Components\Repeater::make('process_items')
-                            ->label('Элементы процесса')
+                            ->label('Стадии работы')
                             ->schema([
                                 Forms\Components\Tabs::make('process_items')
                                     ->tabs([
                                         Forms\Components\Tabs\Tab::make('RU')
                                             ->schema([
                                                 Forms\Components\TextInput::make('item_title_ru')
-                                                    ->label('Заголовок (RU)')
+                                                    ->label('Название (RU)')
                                                     ->required(),
                                                 Forms\Components\Textarea::make('item_description_ru')
                                                     ->label('Описание (RU)')
@@ -125,7 +124,7 @@ class SiteSettingsResource extends Resource
                                         Forms\Components\Tabs\Tab::make('EN')
                                             ->schema([
                                                 Forms\Components\TextInput::make('item_title_en')
-                                                    ->label('Заголовок (EN)')
+                                                    ->label('Название (EN)')
                                                     ->required(),
                                                 Forms\Components\Textarea::make('item_description_en')
                                                     ->label('Описание (EN)')
@@ -136,7 +135,7 @@ class SiteSettingsResource extends Resource
                     ]),
 
                 // Advantages Section
-                Forms\Components\Section::make('Advantages')
+                Forms\Components\Section::make('Раздел - Преимущества')
                     ->schema([
                         Forms\Components\Tabs::make('advantages')
                             ->tabs([
@@ -167,7 +166,7 @@ class SiteSettingsResource extends Resource
                                         Forms\Components\Tabs\Tab::make('RU')
                                             ->schema([
                                                 Forms\Components\TextInput::make('item_title_ru')
-                                                    ->label('Заголовок (RU)')
+                                                    ->label('Название (RU)')
                                                     ->required(),
                                                 Forms\Components\Textarea::make('item_description_ru')
                                                     ->label('Описание (RU)')
@@ -176,7 +175,7 @@ class SiteSettingsResource extends Resource
                                         Forms\Components\Tabs\Tab::make('EN')
                                             ->schema([
                                                 Forms\Components\TextInput::make('item_title_en')
-                                                    ->label('Заголовок (EN)')
+                                                    ->label('Название (EN)')
                                                     ->required(),
                                                 Forms\Components\Textarea::make('item_description_en')
                                                     ->label('Описание (EN)')
@@ -187,7 +186,7 @@ class SiteSettingsResource extends Resource
                     ]),
 
                 // About Section
-                Forms\Components\Section::make('About')
+                Forms\Components\Section::make('Раздел - о нас')
                     ->schema([
                         Forms\Components\Tabs::make('about')
                             ->tabs([
@@ -210,6 +209,11 @@ class SiteSettingsResource extends Resource
                                             ->required(),
                                     ]),
                             ]),
+                            Forms\Components\FileUpload::make('about_image')
+                            ->label('Изображение')
+                            ->directory('about')
+                            ->maxSize(6144)
+                            ->image(),
                             Forms\Components\Repeater::make('about_requirements')
                             ->label('Требования')
                             ->schema([
@@ -238,7 +242,7 @@ class SiteSettingsResource extends Resource
                     ]),
 
                 // Articles Section
-                Forms\Components\Section::make('Articles')
+                Forms\Components\Section::make('Раздел - статьи')
                     ->schema([
                         Forms\Components\Tabs::make('articles')
                             ->tabs([
@@ -264,7 +268,7 @@ class SiteSettingsResource extends Resource
                     ]),
 
                 // Cooperation Section
-                Forms\Components\Section::make('Cooperation')
+                Forms\Components\Section::make('Раздел - сотрудничество')
                     ->schema([
                         Forms\Components\Tabs::make('cooperation')
                             ->tabs([
@@ -290,7 +294,7 @@ class SiteSettingsResource extends Resource
                     ]),
 
                 // Questions Section
-                Forms\Components\Section::make('Questions')
+                Forms\Components\Section::make('Раздел - вопрос-ответ')
                     ->schema([
                         Forms\Components\Tabs::make('questions')
                             ->tabs([
@@ -316,13 +320,13 @@ class SiteSettingsResource extends Resource
                     ]),
 
                 // Contact Information Section
-                Forms\Components\Section::make('Contact Information')
+                Forms\Components\Section::make('Контактная информация')
                     ->schema([
                         Forms\Components\Repeater::make('contact_phones')
                             ->label('Телефоны')
                             ->schema([
                                 Forms\Components\TextInput::make('phone')
-                                    ->label('Телефон')
+                                    ->label('Номер телефона')
                                     ->required(),
                             ]),
                         Forms\Components\Repeater::make('contact_emails')
@@ -340,11 +344,15 @@ class SiteSettingsResource extends Resource
                             ->label('Ссылка на карту')
                             ->required(),
                         Forms\Components\Repeater::make('social_links')
-                            ->label('Социальные ссылки')
+                            ->label('Ссылки на соц.сети')
                             ->schema([
                                 Forms\Components\TextInput::make('link')
                                     ->label('Ссылка')
                                     ->required(),
+                                Forms\Components\FileUpload::make('icon')
+                                    ->label('Иконка соц.сети')
+                                    ->directory('icon')
+                                    ->image(),
                             ]),
                         Forms\Components\TextInput::make('whatsapp_title')
                             ->label('Заголовок WhatsApp')
@@ -355,7 +363,7 @@ class SiteSettingsResource extends Resource
                     ]),
 
                 // General Information Section
-                Forms\Components\Section::make('General Information')
+                Forms\Components\Section::make('Общие настройки')
                     ->schema([
                         Forms\Components\TextInput::make('site_name')
                             ->label('Название сайта')

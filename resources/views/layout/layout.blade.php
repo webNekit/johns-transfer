@@ -35,14 +35,12 @@
         </main>
     </div>
     <div class="whatsapp-widget">
-    <a href="" target="_blank" class="whatsapp-widget__button">
-        <img loading="lazy" src="{{ asset('assets/img/social-wp.png') }}" alt="Логотип whatsapp" class="whatsapp-widget__button-icon">
-    </a>
+    <livewire:widget.whatsapp />
 </div>
 <div class="contacts-modal" id="contacts-modal">
     <div class="contacts-modal__container">
         <div class="contacts-modal__left">
-            <img loading="lazy" src="./img/form-img-2.jpg" alt="" class="contacts-modal__left-img">
+            <img loading="lazy" src="{{ asset('assets/img/driver-img-1.jpg') }}" alt="" class="contacts-modal__left-img">
         </div>
         <div class="contacts-modal__right">
             <button class="contacts-modal__close-btn">
@@ -58,8 +56,12 @@
         </div>
     </div>
 </div>
+<div class="loader-wrapper" id="loader">
+    <div class="spinner"></div>
+</div>
 @include('includes.footer')
 <script src={{ asset('assets/js/index.bundle.js') }}></script>
+<script src="{{ asset('assets/js/loader.min.js') }}"></script>
 @livewireScripts
 </body>
 </html>

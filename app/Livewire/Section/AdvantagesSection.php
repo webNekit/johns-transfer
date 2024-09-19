@@ -17,8 +17,8 @@ class AdvantagesSection extends Component
 
         if (!$siteSettings) {
             return [
-                'title' => '',
-                'description' => '',
+                'title' => 'Укажите заголовок секции',
+                'description' => 'Укажите описание секции',
                 'items' => []
             ];
         }

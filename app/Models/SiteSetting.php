@@ -68,20 +68,67 @@ class SiteSetting extends Model
         'social_links' => 'array',
     ];
 
+    public function getCooperationTitleAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"cooperation_title_{$locale}"};
+    }
+
+    public function getCooperationDescriptionAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"cooperation_description_{$locale}"};
+    }
+
     public function getHeroTitleAttribute()
     {
         $locale = App::getLocale();
         return $this->{"hero_title_{$locale}"};
     }
-
-    // Accessor для описания catalog
-    public function getCatalogDescriptionAttribute()
+    // articles
+    public function getArticlesTitleAttribute()
     {
         $locale = App::getLocale();
-        return $this->{"catalog_description_{$locale}"};
+        return $this->{"articles_title_{$locale}"};
     }
 
-    // Accessor для process repeater
+    public function getArticlesDescriptionAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"articles_description_{$locale}"};
+    }
+
+
+    public function getQuestionTitleAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"question_title_{$locale}"};
+    }
+
+    public function getQuestionDescriptionAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"question_description_{$locale}"};
+    }
+
+    public function getProcessTitleAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"process_title_{$locale}"};
+    }
+
+    public function getProcessDescriptionAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"process_description_{$locale}"};
+    }
+
+    public function getSiteDescriptionAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"site_description_{$locale}"};
+    }
+
     public function getProcessItemsAttribute($value)
     {
         $items = json_decode($value, true);
@@ -114,6 +161,45 @@ class SiteSetting extends Model
         foreach ($items as &$item) {
             $item['title'] = $item["item_title_{$locale}"];
             $item['description'] = $item["item_description_{$locale}"];
+        }
+
+        return $items;
+    }
+
+    // Accessor для заголовка catalog
+    public function getCatalogTitleAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"catalog_title_{$locale}"};
+    }
+
+    // Accessor для описания catalog
+    public function getCatalogDescriptionAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"catalog_description_{$locale}"};
+    }
+
+    public function getAboutTitleAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"about_title_{$locale}"};
+    }
+
+    public function getAboutDescriptionAttribute()
+    {
+        $locale = App::getLocale();
+        return $this->{"about_description_{$locale}"};
+    }
+
+    public function getAboutRequirementsAttribute($value)
+    {
+        $items = json_decode($value, true);
+        $locale = App::getLocale();
+
+        foreach ($items as &$item) {
+            $item['name'] = $item["requirement_title_{$locale}"];
+            $item['description'] = $item["requirement_description_{$locale}"];
         }
 
         return $items;

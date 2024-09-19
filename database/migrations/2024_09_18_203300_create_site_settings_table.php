@@ -43,7 +43,7 @@ return new class extends Migration
             $table->string('about_title_en');
             $table->text('about_description_ru');
             $table->text('about_description_en');
-            $table->string('about_image');
+            $table->string('about_image')->nullable();
             $table->json('about_requirements'); // repeater
 
             // Секция articles

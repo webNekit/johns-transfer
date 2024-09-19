@@ -6,7 +6,7 @@
 			</div>
 			<div class="hero__rowBody">
 				<div class="hero__banner">
-					<img loading="lazy" src="./img/hero-img-2.png" alt="" class="hero__bannerImg" />
+					<img loading="lazy" src="{{ url('storage', $heroData['image']) }}" alt="" class="hero__bannerImg" />
 				</div>
 			</div>
 		</div>

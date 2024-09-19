@@ -4,4 +4,6 @@
 @section('keywords', 'Ключевые поля для заполнения')
 @section('image', 'Изображение')
 @section('content')
+<livewire:section.about-section />
+<livewire:section.requirment-section />
 @endsection
