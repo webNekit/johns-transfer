@@ -823,7 +823,7 @@ pre.code {
 
 .contacts-modal {
   position: fixed;
-  top: -100%;
+  top: -100vh;
   left: 0;
   right: 0;
   bottom: 0;
