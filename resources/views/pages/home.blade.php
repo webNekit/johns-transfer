@@ -4,6 +4,16 @@
 @section('keywords', 'Ключевые поля для заполнения')
 @section('image', 'Изображение')
 @section('content')
+<section class="main__wrapperSection auto-class">
+	<div class="container auto-class__container">
+		<div class="auto-class__rowContent">
+			<livewire:section.catalog-car />
+			<div class="auto-class__rowBody">
+				<livewire:catalog-car />
+			</div>
+		</div>
+	</div>
+</section>
 <livewire:hero-section />
 <section class="main__wrapperSection order" id="order">
 	<div class="container order__container">
@@ -12,16 +22,6 @@
 				<div data-tab-target="tab1" class="order__tab-path">
 					<livewire:main-order-form />
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<section class="main__wrapperSection auto-class">
-	<div class="container auto-class__container">
-		<div class="auto-class__rowContent">
-			<livewire:section.catalog-car />
-			<div class="auto-class__rowBody">
-				<livewire:catalog-car />
 			</div>
 		</div>
 	</div>
