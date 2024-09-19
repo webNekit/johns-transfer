@@ -41,7 +41,7 @@
             </div>
             <div class="contacts-page__colRight">
                 <div class="contacts-page__map" id="map">
-
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A3eb34856bab13aaeb8994566b61912be491eacd8df433cf7349ba8c774ce0380&amp;source=constructor" width="500" height="400" frameborder="0" style="width: 100%; height: 100%;"></iframe>
                 </div>
             </div>
         </div>

@@ -62,6 +62,9 @@
 @include('includes.footer')
 <script src={{ asset('assets/js/index.bundle.js') }}></script>
 <script src="{{ asset('assets/js/loader.min.js') }}"></script>
+<script>
+
+</script>
 @livewireScripts
 </body>
 </html>
