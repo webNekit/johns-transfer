@@ -108,28 +108,29 @@ class CarClassResource extends Resource
                 ])->columnSpanFull(),
                 Section::make('Автомобили')->schema([
                     Repeater::make('cars')
-                        ->label('Автомобили и цены')
-                        ->schema([
-                            Forms\Components\Select::make('car_id')
-                                ->label('Авто')
-                                ->options(Car::all()->mapWithKeys(function ($car) {
-                                    return [$car->id => "{$car->brand} - {$car->model} ({$car->year})"];
-                                }))
-                                ->required(),
-                            TextInput::make('price_one')
-                                ->label('Цена от часа')
-                                ->numeric()
-                                ->required(),
-                            TextInput::make('price_two')
-                                ->label('Цена от 12 часов')
-                                ->numeric()
-                                ->required(),
-                            TextInput::make('price_three')
-                                ->label('Трансфер')
-                                ->numeric()
-                                ->required(),
-                        ])
-                        ->columns(4),
+                    ->label('Автомобили и цены')
+                    ->schema([
+                        Forms\Components\Select::make('car_id')
+                            ->label('Авто')
+                            ->options(Car::all()->mapWithKeys(function ($car) {
+                                return [$car->id => "{$car->brand} - {$car->model} ({$car->year})"];
+                            }))
+                            ->required(),
+                        TextInput::make('price_one')
+                            ->label('Цена от часа')
+                            ->numeric()
+                            ->required(),
+                        TextInput::make('price_two')
+                            ->label('Цена от 12 часов')
+                            ->numeric()
+                            ->required(),
+                        TextInput::make('price_three')
+                            ->label('Трансфер')
+                            ->numeric()
+                            ->required(),
+                    ])
+                    ->columns(4)
+                    ->cloneable() // Включаем возможность клонирования элемента
                 ])->columnSpanFull(),
                 Section::make('Мета-поля')->schema([
                     Tabs::make('tabs')
