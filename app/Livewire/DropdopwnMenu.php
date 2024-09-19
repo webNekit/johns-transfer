@@ -29,7 +29,7 @@ class DropdopwnMenu extends Component
     public function services()
     {
         $services = Service::where('is_active', true)
-            ->orderBy('created_at', 'desc')
+            ->orderBy('created_at', 'asc')
             ->get();
 
         if ($services->isEmpty()) {
@@ -43,7 +43,7 @@ class DropdopwnMenu extends Component
     public function otherServices()
     {
         $otherServices = OrderService::where('is_active', true)
-            ->orderBy('created_at', 'desc')
+            ->orderBy('created_at', 'asc')
             ->get();
 
         if ($otherServices->isEmpty()) {

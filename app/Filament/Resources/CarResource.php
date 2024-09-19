@@ -65,6 +65,8 @@ class CarResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ReplicateAction::make() // Добавляем действие дублирования
+                    ->label('Дублировать'),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

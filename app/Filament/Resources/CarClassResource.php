@@ -164,6 +164,11 @@ class CarClassResource extends Resource
                     ->size(50),
                 BooleanColumn::make('is_active')
                     ->label('Активен'),
+            ])
+            ->actions([
+                Tables\Actions\EditAction::make(),
+                Tables\Actions\ReplicateAction::make() // Добавляем действие дублирования
+                    ->label('Дублировать'),
             ]);
     }
 
