@@ -2308,6 +2308,11 @@ pre.code {
   background-color: var(--color-background-secondary);
 }
 
+.single-article__content ol,
+.single-article__content ul {
+  padding: 16px;
+}
+
 .whatsapp-widget {
   position: fixed;
   z-index: 90;
