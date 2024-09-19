@@ -42,7 +42,7 @@
             </div>
         </div>
         <div class="footer__rowBottom">
-            <p class="footer__copyright">&#169; Copyright 2024 GlobalTransfer</p>
+            <p class="footer__copyright">&#169; Copyright {{ date('Y') }} {{ env('APP_NAME') }}</p>
             <a href="https://t.me/nekitmochalov007" target="_blank" class="footer__author-website">Дизайн и&#160;разработка сайта nikDev</a>
         </div>
     </div>
